@@ -1,0 +1,61 @@
+<template>
+   <div>
+       <van-nav-bar
+            title="喜报编辑"
+            left-text="返回"
+            left-arrow
+            @click-left="onClickLeft"
+        />
+        <CZYHModel 
+            v-if="this.type=='ACPieceBomb'"
+            :PaddingTop="264"
+            :PaddingBottom="284"
+            :imgSrc="require('../../static/ACPieceBomb.jpg')"
+        />
+        <CZYHModel 
+            v-if="this.type=='MainPieceBomb'"
+            :PaddingTop="264"
+            :PaddingBottom="284"
+            :imgSrc="require('../../static/MainPieceBomb.jpg')"
+        />
+        <CZYHModel :imgSrc="require('../../static/ACPieceCelebration.jpg')" v-if="this.type=='ACPieceCelebration'"/>
+        <CZYHModel :imgSrc="require('../../static/MainPieceCelebration.jpg')" v-if="this.type=='MainPieceCelebration'"/>
+   </div>
+</template>
+
+<script>
+/* eslint-disable no-console */
+import { Row, Col, Icon, Button, ImagePreview, NavBar, Field } from 'vant';
+import CZYHModel from './components/CZYHModel.vue'
+
+export default {
+    components: {
+        [Row.name]: Row,
+        [Col.name]: Col,
+        [Icon.name]: Icon,
+        [Image.name]:Image,
+        [Button.name]:Button,
+        [NavBar.name]:NavBar,
+        [ImagePreview.Component.name]:ImagePreview.Component,
+        [Field.name]:Field,
+        CZYHModel
+   },
+   data () {
+      return {
+          type:''
+      };
+   },
+   computed: {},
+    mounted() {
+        this.type = this.$route.query.type;
+    },
+   methods: {
+       onClickLeft() {
+        this.$router.push({name: 'celebratePoster' });
+       }
+   }
+}
+</script>
+<style>
+
+</style>
