@@ -11,34 +11,9 @@
                 <van-switch @change="resetNotAutoStyle" size="16px" v-model="isAuto" />
             </template>
         </van-field>
-        <van-field v-if="isAuto" v-model="channelTop" label="渠道上间距">
-            <template #button>
-                <van-stepper v-model="channelTop" />
-            </template>
-        </van-field>
-        <van-field v-if="isAuto" v-model="channelWidth" label="渠道换行宽度">
-            <template #button>
-                <van-stepper v-model="channelWidth" step="5"/>
-            </template>
-        </van-field>
         <van-field v-if="isAuto" v-model="channelTextSize" label="渠道文本大小">
             <template #button>
                 <van-stepper v-model="channelTextSize" />
-            </template>
-        </van-field>
-        <!-- <van-field v-if="isAuto" v-model="channelTextColor" label="渠道文本字体颜色">
-            <template #button>
-                <van-stepper v-model="channelTextColor" />
-            </template>
-        </van-field> -->
-        <van-field v-if="isAuto" v-model="nameTop" label="姓名上间距">
-            <template #button>
-                <van-stepper v-model="nameTop"/>
-            </template>
-        </van-field>
-        <van-field v-if="isAuto" v-model="nameWidth" label="姓名换行宽度">
-            <template #button>
-                <van-stepper v-model="nameWidth" step="5"/>
             </template>
         </van-field>
         <van-field v-if="isAuto" v-model="nameTextSize" label="姓名文本大小">
@@ -46,14 +21,37 @@
                 <van-stepper v-model="nameTextSize" />
             </template>
         </van-field>
-        <!-- <van-field v-if="isAuto" v-model="nameTextColor" label="姓名文本字体颜色">
+        <van-field v-if="isAuto" v-model="amountTextSize" label="金额文本大小">
             <template #button>
-                <van-stepper v-model="nameTextColor" />
+                <van-stepper v-model="amountTextSize" />
             </template>
-        </van-field> -->
+        </van-field>
+
+        <van-field v-if="isAuto" v-model="channelTop" label="渠道上间距">
+            <template #button>
+                <van-stepper v-model="channelTop" />
+            </template>
+        </van-field>
+        <van-field v-if="isAuto" v-model="nameTop" label="姓名上间距">
+            <template #button>
+                <van-stepper v-model="nameTop"/>
+            </template>
+        </van-field>
         <van-field v-if="isAuto" v-model="amountTop" label="金额上间距">
             <template #button>
                 <van-stepper v-model="amountTop" />
+            </template>
+        </van-field>
+
+
+        <van-field v-if="isAuto" v-model="channelWidth" label="渠道换行宽度">
+            <template #button>
+                <van-stepper v-model="channelWidth" step="5"/>
+            </template>
+        </van-field>
+        <van-field v-if="isAuto" v-model="nameWidth" label="姓名换行宽度">
+            <template #button>
+                <van-stepper v-model="nameWidth" step="5"/>
             </template>
         </van-field>
         <van-field v-if="isAuto" v-model="amountWidth" label="金额换行宽度">
@@ -61,18 +59,9 @@
                 <van-stepper v-model="amountWidth" />
             </template>
         </van-field>
-        <van-field v-if="isAuto" v-model="amountTextSize" label="金额文本大小">
-            <template #button>
-                <van-stepper v-model="amountTextSize" />
-            </template>
-        </van-field>
-        <!-- <van-field v-if="isAuto" v-model="amountTextColor" label="金额文本字体颜色">
-            <template #button>
-                <van-stepper v-model="amountTextColor" />
-            </template>
-        </van-field> -->
-        <van-button type="info ma-sm" @click="saveImg">保存设置</van-button>
-        <van-button type="info mt-sm" @click="saveToLocal">预览并下载</van-button>
+
+
+        <van-button type="info ma-sm" @click="saveImg">保存并预览</van-button>
         <div class="flex justify-center ">
             <div id="toSave" class="save-container">
                 <img id="imgBackground" class="img-container" :src="imgSrc">
@@ -233,7 +222,7 @@ export default {
           //文本大小
           channelTextSize:18,
           nameTextSize:18,
-          amountTextSize:24,
+          amountTextSize:32,
           //字体颜色
           channelTextColor:18,
           nameTextColor:18,
@@ -279,7 +268,7 @@ export default {
             //文本大小
             this.channelTextSize=18,
             this.nameTextSize=18,
-            this.amountTextSize=24,
+            this.amountTextSize=32,
             //字体颜色
             this.channelTextColor=18,
             this.nameTextColor=18,
@@ -331,8 +320,11 @@ export default {
                 }).then(function(canvas) {
                     let imgUrl = canvas.toDataURL('image/png');
                     window.vueThis1.imgWaitingSave = imgUrl
+                    window.vueThis1.saveToLocal()
+                    setTimeout(()=>Toast({message:'长按保存至本地',position: 'top'}),800)
                 });
-            Toast('保存成功')
+
+            // Toast('保存成功')
         },
         saveToLocal() {
             ImagePreview([
