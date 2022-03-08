@@ -1,8 +1,8 @@
 {
-  "name": "vant-demo-vue2",
+  "name": "channel-innersite-poster",
   "version": "1.0.0",
-  "description": "Collection of vant demos.",
-  "author": "neverland <chenjiahan@neverl.com>",
+  "description": "yy celebration poster",
+  "author": "huay",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",

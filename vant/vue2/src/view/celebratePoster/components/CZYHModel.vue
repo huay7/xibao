@@ -197,6 +197,7 @@ export default {
    },
    data () {
       return {
+          isToasted: false,
           //文本值
           channel:'',
           name:'',
@@ -321,7 +322,10 @@ export default {
                     let imgUrl = canvas.toDataURL('image/png');
                     window.vueThis1.imgWaitingSave = imgUrl
                     window.vueThis1.saveToLocal()
-                    setTimeout(()=>Toast({message:'长按保存至本地',position: 'top'}),800)
+                    if(!window.vueThis1.isToasted) {
+                        setTimeout(()=>Toast({message:'长按保存至本地',position: 'top'}),800)
+                        window.vueThis1.isToasted = true
+                    }
                 });
 
             // Toast('保存成功')
