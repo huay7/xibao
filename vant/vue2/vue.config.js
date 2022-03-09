@@ -1,4 +1,4 @@
 module.exports = {
   outputDir: 'dist',
-  publicPath: process.env.NODE_ENV === 'production' ? '/poster/' : '/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/innersite/poster/' : '/'
 };
