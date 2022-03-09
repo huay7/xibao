@@ -221,8 +221,8 @@ export default {
           nameTop:10,
           amountTop:10,
           //文本大小
-          channelTextSize:18,
-          nameTextSize:18,
+          channelTextSize:22,
+          nameTextSize:20,
           amountTextSize:32,
           //字体颜色
           channelTextColor:18,
@@ -267,8 +267,8 @@ export default {
             this.nameTop=10,
             this.amountTop=10,
             //文本大小
-            this.channelTextSize=18,
-            this.nameTextSize=18,
+            this.channelTextSize=22,
+            this.nameTextSize=20,
             this.amountTextSize=32,
             //字体颜色
             this.channelTextColor=18,
