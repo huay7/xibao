@@ -20,6 +20,12 @@
         />
         <CZYHModel :imgSrc="require('../../static/ACPieceCelebration.jpg')" v-if="this.type=='ACPieceCelebration'"/>
         <CZYHModel :imgSrc="require('../../static/MainPieceCelebration.jpg')" v-if="this.type=='MainPieceCelebration'"/>
+        <CZYHSaleTopModel
+            :imgSrc="require('../../static/saleTop.jpg')"
+            v-if="this.type=='saleTop'"
+            :PaddingTop="264"
+            :PaddingBottom="184"
+        />
    </div>
 </template>
 
@@ -27,6 +33,7 @@
 /* eslint-disable no-console */
 import { Row, Col, Icon, Button, ImagePreview, NavBar, Field } from 'vant';
 import CZYHModel from './components/CZYHModel.vue'
+import CZYHSaleTopModel from './components/CZYHSaleTopModel.vue'
 
 export default {
     components: {
@@ -38,7 +45,8 @@ export default {
         [NavBar.name]:NavBar,
         [ImagePreview.Component.name]:ImagePreview.Component,
         [Field.name]:Field,
-        CZYHModel
+        CZYHModel,
+        CZYHSaleTopModel
    },
    data () {
       return {

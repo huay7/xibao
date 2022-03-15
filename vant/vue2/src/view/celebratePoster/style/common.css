@@ -1,15 +1,29 @@
 .flex {
     display: flex;
 }
+.column {
+    flex-direction: column;
+}
 
 .align-center {
     align-items: center;
+}
+.align-end {
+    align-items: flex-end;
 }
 
 .justify-center {
     justify-content: center;
 }
-
+.justify-between {
+    justify-content: space-between;
+}
+.justify-end {
+    justify-content: end;
+}
+.bold {
+    font-weight: bold;
+}
 .pa-md {
     padding: 16px;
 }
