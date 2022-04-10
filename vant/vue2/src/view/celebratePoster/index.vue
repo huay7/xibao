@@ -10,32 +10,32 @@
         <van-col>
             <van-sidebar v-model="activeKey" >
                 <van-sidebar-item title="主代码喜报" />
-                <van-sidebar-item title="主代码爆单" />
+                <!-- <van-sidebar-item title="主代码爆单" /> -->
                 <van-sidebar-item title="AC份额喜报" />
-                <van-sidebar-item title="AC份额爆单" />
-                <van-sidebar-item title="销量王者榜" />
+                <!-- <van-sidebar-item title="AC份额爆单" /> -->
+                <!-- <van-sidebar-item title="销量王者榜" /> -->
             </van-sidebar>
         </van-col>
         <van-col v-show="activeKey===0" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('MainPieceCelebration')">前往生成</van-button>
-             <img class="img-container" src="../../static/MainPieceCelebration.jpg">
+            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('newMain')">前往生成</van-button>
+             <img class="img-container" src="../../static/newMain.jpg">
         </van-col>
-        <van-col v-show="activeKey===1" span="16" >
+        <!-- <van-col v-show="activeKey===1" span="16" >
             <van-button class="ml-sm mt-sm" type="info" @click="goEdit('MainPieceBomb')">前往生成</van-button>
              <img class="img-container" src="../../static/MainPieceBomb.jpg">
+        </van-col> -->
+        <van-col v-show="activeKey===1" span="16" >
+            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('newAC')">前往生成</van-button>
+             <img class="img-container" src="../../static/newAC.jpg">
         </van-col>
-        <van-col v-show="activeKey===2" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('ACPieceCelebration')">前往生成</van-button>
-             <img class="img-container" src="../../static/ACPieceCelebration.jpg">
-        </van-col>
-        <van-col v-show="activeKey===3" span="16" >
+        <!-- <van-col v-show="activeKey===3" span="16" >
             <van-button class="ml-sm mt-sm" type="info" @click="goEdit('ACPieceBomb')">前往生成</van-button>
              <img class="img-container" src="../../static/ACPieceBomb.jpg">
-        </van-col>
-        <van-col v-show="activeKey===4" span="16" >
+        </van-col> -->
+        <!-- <van-col v-show="activeKey===4" span="16" >
             <van-button class="ml-sm mt-sm" type="info" @click="goEdit('saleTop')">前往生成</van-button>
              <img class="img-container" src="../../static/saleTop.jpg">
-        </van-col>
+        </van-col> -->
     </van-row>
   </div>
 </template>

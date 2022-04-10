@@ -20,6 +20,8 @@
         />
         <CZYHModel :imgSrc="require('../../static/ACPieceCelebration.jpg')" v-if="this.type=='ACPieceCelebration'"/>
         <CZYHModel :imgSrc="require('../../static/MainPieceCelebration.jpg')" v-if="this.type=='MainPieceCelebration'"/>
+        <CZYHModel :imgSrc="require('../../static/newAC.jpg')" v-if="this.type=='newAC'"/>
+        <CZYHModel :imgSrc="require('../../static/newMain.jpg')" v-if="this.type=='newMain'"/>
         <CZYHSaleTopModel
             :imgSrc="require('../../static/saleTop.jpg')"
             v-if="this.type=='saleTop'"

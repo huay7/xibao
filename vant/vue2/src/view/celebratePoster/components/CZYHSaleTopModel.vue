@@ -19,21 +19,21 @@
                         <div id="child1" class="child1 flex align-center bold">
                             <div class="width90 flex column align-end">
                                 <div class="font14">{{channelA}}</div>
-                                <div class="font14">{{nameA}}</div>
+                                <div class="font18">{{nameA}}</div>
                             </div>
                             <span class="font35 bold ml10">{{amountA}}</span>
                         </div>
                         <div id="child2" class="child2 flex align-center bold">
                             <div class="width90 flex column align-end">
                                 <div class="font14">{{channelB}}</div>
-                                <div class="font14">{{nameB}}</div>
+                                <div class="font18">{{nameB}}</div>
                             </div>
                             <span class="font35 bold ml10">{{amountB}}</span>
                         </div>
                         <div id="child3" class="child3 flex align-center bold">
                             <div class="width90 flex column align-end">
                                 <div class="font14">{{channelC}}</div>
-                                <div class="font14">{{nameC}}</div>
+                                <div class="font18">{{nameC}}</div>
                             </div>
                             <span class="font35 align-center ml10">{{amountC}}</span>
                         </div>
@@ -273,6 +273,9 @@ export default {
 }
 .font14 {
     font-size: 16px;
+}
+.font18 {
+    font-size: 20px;
 }
 .font35 {
     font-size: 35px;
