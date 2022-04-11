@@ -28,6 +28,12 @@
             :PaddingTop="264"
             :PaddingBottom="184"
         />
+        <CZYHModel
+            :imgSrc="require('../../static/xunli.jpg')"
+            v-if="this.type=='xunli'"
+            :PaddingTop="208"
+            :PaddingBottom="334"
+        />
    </div>
 </template>
 
