@@ -29,8 +29,8 @@
             :PaddingBottom="184"
         />
         <CZYHModel
-            :imgSrc="require('../../static/xunli.jpg')"
-            v-if="this.type=='xunli'"
+            :imgSrc="require('../../static/xunliNew.jpg')"
+            v-if="this.type=='xunliNew'"
             :PaddingTop="208"
             :PaddingBottom="334"
         />
