@@ -15,6 +15,8 @@
                 <!-- <van-sidebar-item title="AC份额爆单" /> -->
                 <van-sidebar-item title="销量王者榜" />
                 <van-sidebar-item title="迅利主代码喜报" />
+                <van-sidebar-item title="宁旭稳进喜报" />
+                <van-sidebar-item title="开泰中短债喜报" />
             </van-sidebar>
         </van-col>
         <van-col v-show="activeKey===0" span="16" >
@@ -38,8 +40,16 @@
              <img class="img-container" src="../../static/saleTop.jpg">
         </van-col>
         <van-col v-show="activeKey===3" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('xunliNew')">前往生成</van-button>
-             <img class="img-container" src="../../static/xunliNew.jpg">
+            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('xunliNew2')">前往生成</van-button>
+             <img class="img-container" src="../../static/xunliNew2.jpg">
+        </van-col>
+        <van-col v-show="activeKey===4" span="16" >
+            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('ningxuwenjin')">前往生成</van-button>
+             <img class="img-container" src="../../static/ningxuwenjin.jpg">
+        </van-col>
+        <van-col v-show="activeKey===5" span="16" >
+            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('kaitai')">前往生成</van-button>
+             <img class="img-container" src="../../static/kaitai.jpg">
         </van-col>
     </van-row>
   </div>
