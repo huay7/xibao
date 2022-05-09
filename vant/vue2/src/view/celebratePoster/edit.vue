@@ -29,18 +29,22 @@
             :PaddingBottom="184"
         />
         <CZYHModel
-            :imgSrc="require('../../static/xunliNew2.jpg')"
-            v-if="this.type=='xunliNew2'"
+            :imgSrc="require('../../static/xunliNew3.jpg')"
+            v-if="this.type=='xunliNew3'"
             :PaddingTop="208"
             :PaddingBottom="334"
         />
         <CZYHModel
-            :imgSrc="require('../../static/ningxuwenjin.jpg')"
-            v-if="this.type=='ningxuwenjin'"
+            :imgSrc="require('../../static/ningxuwenjin3.jpg')"
+            v-if="this.type=='ningxuwenjin3'"
         />
         <CZYHModel
             :imgSrc="require('../../static/kaitai.jpg')"
             v-if="this.type=='kaitai'"
+        />
+        <CZYHModel
+            :imgSrc="require('../../static/kaitaiA.jpg')"
+            v-if="this.type=='kaitaiA'"
         />
    </div>
 </template>
