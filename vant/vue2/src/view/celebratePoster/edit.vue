@@ -35,6 +35,18 @@
             :PaddingBottom="334"
         />
         <CZYHModel
+            :imgSrc="require('../../static/xunliANew4.jpg')"
+            v-if="this.type=='xunliANew4'"
+            :PaddingTop="208"
+            :PaddingBottom="334"
+        />
+        <CZYHModel
+            :imgSrc="require('../../static/xunliENew1.jpg')"
+            v-if="this.type=='xunliENew1'"
+            :PaddingTop="208"
+            :PaddingBottom="334"
+        />
+        <CZYHModel
             :imgSrc="require('../../static/ningxuwenjin3.jpg')"
             v-if="this.type=='ningxuwenjin3'"
         />
