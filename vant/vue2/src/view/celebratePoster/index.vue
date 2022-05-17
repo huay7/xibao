@@ -20,6 +20,7 @@
                 <van-sidebar-item title="宁旭稳进2期" />
                 <van-sidebar-item title="开泰C" />
                 <van-sidebar-item title="开泰A" />
+                <van-sidebar-item title="华嘉" />
             </van-sidebar>
         </van-col>
         <van-col v-show="activeKey===0" span="16" >
@@ -65,6 +66,10 @@
         <van-col v-show="activeKey===8" span="16" >
             <van-button class="ml-sm mt-sm" type="info" @click="goEdit('kaitaiA')">前往生成</van-button>
              <img class="img-container" src="../../static/kaitaiA.jpg">
+        </van-col>
+        <van-col v-show="activeKey===9" span="16" >
+            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('huajia')">前往生成</van-button>
+             <img class="img-container" src="../../static/huajia.jpg">
         </van-col>
     </van-row>
   </div>

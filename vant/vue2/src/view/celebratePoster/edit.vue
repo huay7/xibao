@@ -49,14 +49,26 @@
         <CZYHModel
             :imgSrc="require('../../static/ningxuwenjin3.jpg')"
             v-if="this.type=='ningxuwenjin3'"
+            :PaddingTop="208"
+            :PaddingBottom="334"
         />
         <CZYHModel
             :imgSrc="require('../../static/kaitai.jpg')"
             v-if="this.type=='kaitai'"
+            :PaddingTop="208"
+            :PaddingBottom="334"
         />
         <CZYHModel
             :imgSrc="require('../../static/kaitaiA.jpg')"
             v-if="this.type=='kaitaiA'"
+            :PaddingTop="208"
+            :PaddingBottom="334"
+        />
+        <CZYHModel
+            :imgSrc="require('../../static/huajia.jpg')"
+            v-if="this.type=='huajia'"
+            :PaddingTop="208"
+            :PaddingBottom="334"
         />
    </div>
 </template>
