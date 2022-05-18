@@ -1,75 +1,14 @@
 <template>
   <div>
-      <!-- <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-          <van-swipe-item>保存设置后预览长按可下载到本地</van-swipe-item>
-          <van-swipe-item>请合理配置话术</van-swipe-item>
-          <van-swipe-item>欢迎及时反馈遇到的问题</van-swipe-item>
-      </van-swipe> -->
-
     <van-row type="flex">
         <van-col>
             <van-sidebar v-model="activeKey" >
-                <van-sidebar-item title="迅利A(波行版)" />
-                <van-sidebar-item title="迅利A(通用)" />
-                <van-sidebar-item title="迅利E(通用)" />
-                <van-sidebar-item title="开泰C" />
-                <van-sidebar-item title="开泰A" />
-                <van-sidebar-item title="宁旭稳进2期" />
-                <van-sidebar-item title="华嘉" />
-                <van-sidebar-item title="成长远航主代码" />
-                <!-- <van-sidebar-item title="主代码爆单" /> -->
-                <van-sidebar-item title="成长远航AC代码" />
-                <!-- <van-sidebar-item title="AC份额爆单" /> -->
-                <van-sidebar-item title="成长远航销量王者榜" />
+                <van-sidebar-item v-for="(item,index) in param" :key="index" :title="item.title" />
             </van-sidebar>
         </van-col>
-        <van-col v-show="activeKey===0" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('xunliNew3')">前往生成</van-button>
-             <img class="img-container" src="../../static/xunliNew3.jpg">
-        </van-col>
-        <van-col v-show="activeKey===1" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('xunliANew4')">前往生成</van-button>
-             <img class="img-container" src="../../static/xunliANew4.jpg">
-        </van-col>
-        <van-col v-show="activeKey===2" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('xunliENew1')">前往生成</van-button>
-             <img class="img-container" src="../../static/xunliENew1.jpg">
-        </van-col>
-        <van-col v-show="activeKey===3" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('kaitai')">前往生成</van-button>
-             <img class="img-container" src="../../static/kaitai.jpg">
-        </van-col>
-        <van-col v-show="activeKey===4" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('kaitaiA')">前往生成</van-button>
-             <img class="img-container" src="../../static/kaitaiA.jpg">
-        </van-col>
-        <van-col v-show="activeKey===5" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('ningxuwenjin3')">前往生成</van-button>
-             <img class="img-container" src="../../static/ningxuwenjin3.jpg">
-        </van-col>
-        <van-col v-show="activeKey===6" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('huajia')">前往生成</van-button>
-             <img class="img-container" src="../../static/huajia.jpg">
-        </van-col>
-        <van-col v-show="activeKey===7" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('newMain')">前往生成</van-button>
-             <img class="img-container" src="../../static/newMain.jpg">
-        </van-col>
-        <!-- <van-col v-show="activeKey===1" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('MainPieceBomb')">前往生成</van-button>
-             <img class="img-container" src="../../static/MainPieceBomb.jpg">
-        </van-col> -->
-        <van-col v-show="activeKey===8" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('newAC')">前往生成</van-button>
-             <img class="img-container" src="../../static/newAC.jpg">
-        </van-col>
-        <!-- <van-col v-show="activeKey===3" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('ACPieceBomb')">前往生成</van-button>
-             <img class="img-container" src="../../static/ACPieceBomb.jpg">
-        </van-col> -->
-        <van-col v-show="activeKey===9" span="16" >
-            <van-button class="ml-sm mt-sm" type="info" @click="goEdit('saleTop')">前往生成</van-button>
-             <img class="img-container" src="../../static/saleTop.jpg">
+        <van-col v-for="(item,index) in param"  :key="index" v-show="activeKey===index" span="16" >
+            <van-button class="ml-sm mt-sm" type="info" @click="goEdit(item.type,item.img,item.top,item.bottom)">前往生成</van-button>
+             <img class="img-container" :src="item.img">
         </van-col>
     </van-row>
   </div>
@@ -95,15 +34,77 @@ export default {
   data() {
       return {
         activeKey: 0,
-        imgWaitingSave:''
+        imgWaitingSave: '',
+        param: []
       }
   },
   created() {
     window.vueThis = this;
+    this.param = [{
+      title: '迅利A(波行版)',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/xunliNew3.jpg?versionId=CAEQLRiBgIDVnLXYhhgiIGVmNGMxZDQyZDFkYjRhMmRiZjM2OTkxMzU0NmIwM2E1',
+      top: 208,
+      bottom: 334,
+    },{
+      title: '迅利A(通用)',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/xunliANew4.jpg?versionId=CAEQLRiBgMD_o7zYhhgiIGJlMmNjYmFmN2MyZjRmOWU5MGIxNTViNGE3M2ZkNzgy',
+      top: 208,
+      bottom: 334,
+    },{
+      title: '迅利E(通用)',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/xunliENew1.jpg?versionId=CAEQLRiBgMDlo7zYhhgiIDhmODY3Yjk2YmFmMDRhMzg5NGUxNDcyMGQ4OWY1M2Yz',
+      top: 208,
+      bottom: 334,
+    },{
+      title: '开泰C',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/kaitai.jpg?versionId=CAEQLRiBgMDho7zYhhgiIGI4YmI1ZWI4ODJhYjQwOWU4ZjNlZjZiZjZhMWJkYTdl',
+      top: 208,
+      bottom: 334,
+    },{
+      title: '开泰A',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/kaitaiA.jpg?versionId=CAEQLRiBgIDSo7zYhhgiIDYxMjRjMDI2N2I3NzQ4NzM5YTVmNWMyNGRjMTVkNTQ2',
+      top: 208,
+      bottom: 334,
+    },{
+      title: '宁旭稳进2期',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/ningxuwenjin3.jpg?versionId=CAEQLRiBgIDxpLzYhhgiIDI5NmRhNDE2NmUyNjQ0N2E4YTgxODcyYzczZTc4OWUz',
+      top: 208,
+      bottom: 334,
+    },{
+      title: '华嘉',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/huajia.jpg?versionId=CAEQLRiBgMD2pLzYhhgiIDRmZjlmMTZlNWZkMTQ2YjFiYTQ3MWE1NTdlMTliZjBk',
+      top: 208,
+      bottom: 334,
+    },{
+      title: '成长远航主代码',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/newMain.jpg?versionId=CAEQLRiBgMClo7zYhhgiIGIzZTlkNWIxM2EwNDQxNjliYzMwMDdmYjQyMGVmY2Vh',
+      top: 224,
+      bottom: 318,
+    },{
+      title: '成长远航AC代码',
+      type: 'CZYHModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/newAC.jpg?versionId=CAEQLRiBgMCXo7zYhhgiIGVmNDY1MjY0Y2M4MTRkYWE4MGU1MTQ0OTA1MWZhNWU1',
+      top: 224,
+      bottom: 318,
+    },{
+      title: '成长远航销量王者榜',
+      type: 'CZYHSaleTopModel',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/saleTop.jpg?versionId=CAEQLRiBgMDso7zYhhgiIDQ2MGYzZTkzMDIwZTQyNjI5NjgwNGQxYTM4ZjFjNmMy',
+      top: 264,
+      bottom: 184,
+    },]
   },
   methods:{
-    goEdit(type) {
-        this.$router.push({name: 'edit' ,query: {type}});
+    goEdit(type, img, top, bottom) {
+        this.$router.push({name: 'edit' ,query: {type,img,top,bottom}});
     }
   }
 };
@@ -122,7 +123,6 @@ export default {
     font-size: 20px;
     line-height: 150px;
     text-align: center;
-    // background-color: #39a9ed;
 }
 .user {
   &-poster {

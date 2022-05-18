@@ -6,70 +6,18 @@
             left-arrow
             @click-left="onClickLeft"
         />
-        <CZYHModel 
-            v-if="this.type=='ACPieceBomb'"
-            :PaddingTop="264"
-            :PaddingBottom="284"
-            :imgSrc="require('../../static/ACPieceBomb.jpg')"
-        />
-        <CZYHModel 
-            v-if="this.type=='MainPieceBomb'"
-            :PaddingTop="264"
-            :PaddingBottom="284"
-            :imgSrc="require('../../static/MainPieceBomb.jpg')"
-        />
-        <CZYHModel :imgSrc="require('../../static/ACPieceCelebration.jpg')" v-if="this.type=='ACPieceCelebration'"/>
-        <CZYHModel :imgSrc="require('../../static/MainPieceCelebration.jpg')" v-if="this.type=='MainPieceCelebration'"/>
-        <CZYHModel :imgSrc="require('../../static/newAC.jpg')" v-if="this.type=='newAC'"/>
-        <CZYHModel :imgSrc="require('../../static/newMain.jpg')" v-if="this.type=='newMain'"/>
-        <CZYHSaleTopModel
-            :imgSrc="require('../../static/saleTop.jpg')"
-            v-if="this.type=='saleTop'"
-            :PaddingTop="264"
-            :PaddingBottom="184"
-        />
-        <CZYHModel
-            :imgSrc="require('../../static/xunliNew3.jpg')"
-            v-if="this.type=='xunliNew3'"
-            :PaddingTop="208"
-            :PaddingBottom="334"
-        />
-        <CZYHModel
-            :imgSrc="require('../../static/xunliANew4.jpg')"
-            v-if="this.type=='xunliANew4'"
-            :PaddingTop="208"
-            :PaddingBottom="334"
-        />
-        <CZYHModel
-            :imgSrc="require('../../static/xunliENew1.jpg')"
-            v-if="this.type=='xunliENew1'"
-            :PaddingTop="208"
-            :PaddingBottom="334"
-        />
-        <CZYHModel
-            :imgSrc="require('../../static/ningxuwenjin3.jpg')"
-            v-if="this.type=='ningxuwenjin3'"
-            :PaddingTop="208"
-            :PaddingBottom="334"
-        />
-        <CZYHModel
-            :imgSrc="require('../../static/kaitai.jpg')"
-            v-if="this.type=='kaitai'"
-            :PaddingTop="208"
-            :PaddingBottom="334"
-        />
-        <CZYHModel
-            :imgSrc="require('../../static/kaitaiA.jpg')"
-            v-if="this.type=='kaitaiA'"
-            :PaddingTop="208"
-            :PaddingBottom="334"
-        />
-        <CZYHModel
-            :imgSrc="require('../../static/huajia.jpg')"
-            v-if="this.type=='huajia'"
-            :PaddingTop="208"
-            :PaddingBottom="334"
-        />
+            <CZYHModel 
+                v-if="this.type=='CZYHModel'"
+                :PaddingTop="this.top"
+                :PaddingBottom="this.bottom"
+                :imgSrc="this.img"
+            />
+            <CZYHSaleTopModel
+                v-if="this.type=='CZYHSaleTopModel'"
+                :PaddingTop="this.top"
+                :PaddingBottom="this.bottom"
+                :imgSrc="this.img"
+            />
    </div>
 </template>
 
@@ -100,6 +48,9 @@ export default {
    computed: {},
     mounted() {
         this.type = this.$route.query.type;
+        this.img = this.$route.query.img;
+        this.top = this.$route.query.top;
+        this.bottom = this.$route.query.bottom;
     },
    methods: {
        onClickLeft() {

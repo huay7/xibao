@@ -318,6 +318,7 @@ export default {
                 {
                     width: this.imgWidth, //canvas宽度
                     height: this.imgHeight,//canvas高度
+                    useCORS: true,
                 }).then(function(canvas) {
                     let imgUrl = canvas.toDataURL('image/png');
                     window.vueThis1.imgWaitingSave = imgUrl
