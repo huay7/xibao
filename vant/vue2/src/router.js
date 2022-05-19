@@ -6,7 +6,7 @@ Vue.use(Router);
 const routes = [
   {
     path: '*',
-    redirect: '/celebratePoster'
+    redirect: '/test2'
   },
   {
     name: 'celebratePoster',
@@ -20,6 +20,20 @@ const routes = [
     component: () => import('./view/celebratePoster/edit'),
     meta: {
       title: '喜报编辑'
+    }
+  },
+  {
+    name: 'test',
+    component: () => import('./view/new2'),
+    meta: {
+      title: '测试'
+    }
+  },
+  {
+    name: 'test2',
+    component: () => import('./view/new3/posterlist'),
+    meta: {
+      title: '测试'
     }
   }
 ];
