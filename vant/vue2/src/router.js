@@ -4,10 +4,10 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 const routes = [
-  {
-    path: '*',
-    redirect: '/test2'
-  },
+  // {
+  //   path: '*',
+  //   redirect: '/autoIvestList'
+  // },
   {
     name: 'celebratePoster',
     component: () => import('./view/celebratePoster'),
@@ -23,19 +23,33 @@ const routes = [
     }
   },
   {
-    name: 'test',
-    component: () => import('./view/new2'),
+    name: 'pdfList',
+    component: () => import('./view/pdfList'),
     meta: {
-      title: '测试'
+      title: '永赢产品报告合集'
     }
   },
   {
-    name: 'test2',
-    component: () => import('./view/new3/posterlist'),
+    name: 'autoIvestList',
+    component: () => import('./view/autoIvestList'),
     meta: {
-      title: '测试'
+      title: '永赢定投资料包'
     }
-  }
+  },
+  {
+    name: 'autoIvestPdfList',
+    component: () => import('./view/autoIvestList/list'),
+    meta: {
+      title: '定投垫板合集'
+    }
+  },
+  {
+    name: 'autoIvestPosterList',
+    component: () => import('./view/autoIvestList/posterlist'),
+    meta: {
+      title: '定投海报合集'
+    }
+  },
 ];
 
 // add route path

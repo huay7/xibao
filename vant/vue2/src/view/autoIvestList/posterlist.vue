@@ -1,13 +1,13 @@
 <template>
   <div>
     <van-grid :gutter="10">
-        <van-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字">
+        <van-grid-item v-for="(item,index) in param" :key="index">
             <van-image
                 width="80px"
-                height="280px"
+                height="180px"
                 fit="cover"
-                src="https://img01.yzcdn.cn/vant/cat.jpeg"
-                @click="preview"
+                :src="item.url"
+                @click="preview(item)"
             />
         </van-grid-item>
     </van-grid>
@@ -40,35 +40,35 @@ export default {
   },
   data() {
       return {
-        active: 0,
-        active1: 0,
-        activeNames: ['1'],
-        list: ['大跌后，如何加速回本解套？','赎回定投的基金份额，是不是代表定投终止？'],
-        loading: false,
+        param:[]
       }
   },
-  created() { },
-  methods:{
-      preview() {
-        ImagePreview(['https://img01.yzcdn.cn/vant/cat.jpeg']);
+  created() {
+    this.param = [
+      {
+        url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A51.jpg'
       },
-    onLoad() {
-      // 异步更新数据
-      // setTimeout 仅做示例，真实场景中一般为 ajax 请求
-      setTimeout(() => {
-        for (let i = 0; i < 2; i++) {
-          this.list.push(this.list.length + 1);
-        }
-
-        // 加载状态结束
-        this.loading = false;
-
-        // 数据全部加载完成
-        if (this.list.length >= 40) {
-          this.finished = true;
-        }
-      }, 1000);
-    },
+      {
+        url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A52.jpg'
+      },
+      {
+        url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%8D%8E%E5%98%89%E4%BF%A1%E7%94%A8%E5%80%BA%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A5.JPG'
+      },
+      {
+        url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%951.jpg'
+      },
+      {
+        url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%952.jpg'
+      },
+      {
+        url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E6%99%BA%E8%83%BD%E9%A2%86%E5%85%88%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A5.JPG'
+      }
+    ]
+   },
+  methods:{
+      preview(item) {
+        ImagePreview([item.url]);
+      },
   }
 };
 </script>

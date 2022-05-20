@@ -2,15 +2,70 @@
   <div>
     <van-tabs v-model="activeKey">
         <van-tab v-for="(item,index) in param" :key="index" :title="item.title">
-            <van-collapse v-model="activeNames">
+                <van-row type="flex">
+                    <van-col span="6" >
+                        <van-sidebar v-model="activeKey">
+                            <van-sidebar-item title="季度单页">
+                            </van-sidebar-item>
+                            <van-sidebar-item title="季度运作报告" />
+                        </van-sidebar>
+                    </van-col>
+                    <van-col v-show="activeKey===0" span="18" type="flex" justify="center" align="center">
+                        <!-- <van-row type="flex" justify="center" align="center">
+                            aaaa -->
+                                <van-image
+                                    radius="8px"
+                                    class="mt-20px"
+                                    width="220px"
+                                    height="100px"
+                                    fit="cover"
+                                    :src="require('./banner.jpg')"
+                                    @click="preview"
+                                    :key="value" 
+                                />
+                                <van-image
+                                    radius="8px"
+                                    class="mt-20px"
+                                    width="220px"
+                                    height="100px"
+                                    fit="cover"
+                                    :src="require('./banner1.jpg')"
+                                    @click="preview"
+                                    :key="value" 
+                                />
+                                <van-image
+                                    radius="8px"
+                                    class="mt-20px"
+                                    width="220px"
+                                    height="100px"
+                                    fit="cover"
+                                    :src="require('./banner2.jpg')"
+                                    @click="preview"
+                                    :key="value" 
+                                />
+                                <van-image
+                                    radius="8px"
+                                    class="mt-20px"
+                                    width="220px"
+                                    height="100px"
+                                    fit="cover"
+                                    :src="require('./banner3.jpg')"
+                                    @click="preview"
+                                    :key="value" 
+                                />
+                        <!-- </van-row> -->
+                    </van-col>
+                </van-row>
+            <!-- <van-collapse v-model="activeNames">
                 <van-collapse-item v-for="(childitem,childindex) in item.list" :key="childindex" :title="childitem.title" :name="childindex">
                     <van-grid :border="false" direction="horizontal" :column-num="2">
                         <van-grid-item v-for="(grandchilditem,grandchildindex) in childitem.pdflist" :key="grandchildindex" icon="photo-o" :text="grandchilditem" />
                     </van-grid>
                 </van-collapse-item>
-            </van-collapse>
+            </van-collapse> -->
         </van-tab>
     </van-tabs>
+
   </div>
 </template>
 
@@ -162,4 +217,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.mt-20px {
+    margin-top: 28px;
+}
 </style>
