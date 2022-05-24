@@ -321,6 +321,16 @@ export default {
                     useCORS: true,
                     allowTaint: true
                 }).then(function(canvas) {
+                    console.log(canvas)
+                //   alert(canvas)
+                });
+            html2canvas(document.getElementById('toSave'),
+                {
+                    width: this.imgWidth, //canvas宽度
+                    height: this.imgHeight,//canvas高度
+                    useCORS: true,
+                    allowTaint: true
+                }).then(function(canvas) {
                     let imgUrl = canvas.toDataURL('image/png');
                     window.vueThis1.imgWaitingSave = imgUrl
                     window.vueThis1.saveToLocal()
