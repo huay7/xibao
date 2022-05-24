@@ -23,20 +23,12 @@
 
 <script>
 /* eslint-disable no-console */
-import { Row, Col, Icon, Button, ImagePreview, NavBar, Field } from 'vant';
+// import { Row, Col, Icon, Button, ImagePreview, NavBar, Field } from 'vant';
 import CZYHModel from './components/CZYHModel.vue'
 import CZYHSaleTopModel from './components/CZYHSaleTopModel.vue'
 
 export default {
     components: {
-        [Row.name]: Row,
-        [Col.name]: Col,
-        [Icon.name]: Icon,
-        [Image.name]:Image,
-        [Button.name]:Button,
-        [NavBar.name]:NavBar,
-        [ImagePreview.Component.name]:ImagePreview.Component,
-        [Field.name]:Field,
         CZYHModel,
         CZYHSaleTopModel
    },

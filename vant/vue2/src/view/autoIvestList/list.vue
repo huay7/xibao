@@ -47,29 +47,9 @@
 </template>
 
 <script>
-import { Grid, GridItem,Collapse,CollapseItem,List,Tab,Tabs,Row, Col, Icon, Cell, CellGroup,Sidebar, SidebarItem,Swipe, SwipeItem, Image, Button, ImagePreview } from 'vant';
+import { ImagePreview } from 'vant';
 export default {
-  components: {
-    [Row.name]: Row,
-    [Col.name]: Col,
-    [Icon.name]: Icon,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [Sidebar.name]:Sidebar,
-    [SidebarItem.name]:SidebarItem,
-    [Swipe.name]:Swipe,
-    [SwipeItem.name]:SwipeItem,
-    [Image.name]:Image,
-    [Button.name]:Button,
-    [Tab.name]:Tab,
-    [Tabs.name]:Tabs,
-    [List.name]:List,
-    [Grid.name]:Grid,
-    [GridItem.name]:GridItem,
-    [Collapse.name]:Collapse,
-    [CollapseItem.name]:CollapseItem,
-    [ImagePreview.Component.name]:ImagePreview.Component,
-  },
+
   data() {
       return {
         active: [0,0,0,0,0,0,0,0],
