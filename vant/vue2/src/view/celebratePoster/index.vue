@@ -64,13 +64,13 @@ export default {
     },{
       title: '安盈A',
       type: 'CZYHModel',
-      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/%E5%AE%89%E7%9B%88A.png?versionId=CAEQLhiBgIDq98L_hxgiIDUzMjYzOTNlYTcyZDQwZGM4MDQyYWRlMWU2NjEzNGM5',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052701/%E5%AE%89%E7%9B%88A.png?versionId=CAEQLhiBgMCI.4uQiBgiIGE4NDNjODFmNjljNjQ0MzA5N2RhOTBiNGQ2ODk5ODVh',
       top: 208,
       bottom: 334,
     },{
       title: '安盈AC',
       type: 'CZYHModel',
-      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/%E5%AE%89%E7%9B%88AC.png?versionId=CAEQLhiBgMCj98L_hxgiIDJmNWIzM2QwN2JjNTRmNGY4MDA0NDViOThlNGViYTUz',
+      img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052701/%E5%AE%89%E7%9B%88AC.png?versionId=CAEQLhiBgMCB.4uQiBgiIGY4Mjk4MzM1YjEzMTRhMmI5ZWI3NWE2MTU4NTA5MWQ0',
       top: 208,
       bottom: 334,
     },{
