@@ -1,6 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+// 获取原型对象上的push函数
+const originalPush = Router.prototype.push
+// 修改原型对象中的push方法
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 Vue.use(Router);
 
 const routes = [
@@ -23,31 +29,10 @@ const routes = [
     }
   },
   {
-    name: 'pdfList',
-    component: () => import('./view/pdfList'),
+    name: 'main',
+    component: () => import('./view/main'),
     meta: {
-      title: '永赢产品报告合集'
-    }
-  },
-  {
-    name: 'autoIvestList',
-    component: () => import('./view/autoIvestList'),
-    meta: {
-      title: '永赢定投资料包'
-    }
-  },
-  {
-    name: 'autoIvestPdfList',
-    component: () => import('./view/autoIvestList/list'),
-    meta: {
-      title: '定投垫板合集'
-    }
-  },
-  {
-    name: 'autoIvestPosterList',
-    component: () => import('./view/autoIvestList/posterlist'),
-    meta: {
-      title: '定投海报合集'
+      title: 'main'
     }
   },
 ];

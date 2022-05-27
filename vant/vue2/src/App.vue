@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view :key="$route.path+(new Date()).getTime()" />
   </div>
 </template>
-
 <style>
 body {
   font-size: 16px;

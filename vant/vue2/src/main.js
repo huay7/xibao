@@ -1,12 +1,16 @@
 import Vue from 'vue';
 import App from './App';
 import { router } from './router';
-// import VConsole from 'vconsole';
-// import 'vant/lib/icon/local.css';
 import Vant from 'vant/lib/index';
+import clipboard from 'clipboard';
 import 'vant/lib/index.less';
-import 'vant/lib/icon/local.css';
 
+import { wxShare, setTitle } from './utils/util'
+
+//注册到vue原型上
+Vue.prototype.clipboard = clipboard;
+Vue.prototype.wxShare = wxShare;
+Vue.prototype.setTitle = setTitle;
 // new VConsole()
 
 Vue.use(Vant);
@@ -15,4 +19,3 @@ new Vue({
   el: '#app',
   render: h => h(App)
 });
-// Vue.use(Vant);
