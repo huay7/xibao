@@ -13,6 +13,7 @@ import celebrateposter from '../celebratePoster'
 import { pageA,pageB,pageC } from './autoIvest.js'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
+import { queryParams } from '@/utils/api'
 export default {
     components: {
         posterlist,
@@ -27,7 +28,10 @@ export default {
         currentTabComponent: {},
       };
    },
-    created() {
+    async created() {
+        const res = await queryParams()
+        console.log('created')
+        console.log(res)
         this.id = this.$route.query.id;
         this.getCurrent(this.id)
         this.setTitle(this.currentTabComponent.title)

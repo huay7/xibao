@@ -78,7 +78,8 @@ export default {
         ImagePreview([item.img]);
       } else if (item.type=='pdf') {
         var link = document.createElement('a');
-        link.setAttribute("href", item.pdf);
+        const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
+        link.setAttribute("href", downloadUrl);
         link.setAttribute("download", '测试下载.pdf');
         var evObj = document.createEvent('MouseEvents');
         evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
@@ -90,7 +91,8 @@ export default {
     detailClick(item) {
           if(item.type=='pdf') {
             var link = document.createElement('a');
-            link.setAttribute("href", item.url);
+            const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
+            link.setAttribute("href", downloadUrl);
             link.setAttribute("download", '测试下载.pdf');
             var evObj = document.createEvent('MouseEvents');
             evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);

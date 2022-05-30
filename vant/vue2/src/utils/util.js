@@ -40,3 +40,16 @@ export function wxShare(title,desc,imgUrl) {
 export function setTitle(title) {
     window.document.title = title
 }
+
+export function getPDFDownLoadUrl(url) {
+    const u = navigator.userAgent;
+    const isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    // const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    let urlRes=''
+    if(isAndroid&&url.android) {
+        urlRes = url.android
+    } else {
+        urlRes = url.ios
+    }
+    return urlRes
+}
