@@ -1,3 +1,5 @@
+import { Base64 } from 'js-base64';
+
 
 export function wxShare(title,desc,imgUrl) {
     window.$.ajax({
@@ -52,4 +54,12 @@ export function getPDFDownLoadUrl(url) {
         urlRes = url.ios
     }
     return urlRes
+}
+
+
+export function base64Decode(text) {
+    return Base64.decode(text);
+}
+export function base64Encode(text) {
+    return Base64.encode(text);
 }

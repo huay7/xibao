@@ -13,7 +13,7 @@ import celebrateposter from '../celebratePoster'
 import { pageA,pageB,pageC } from './autoIvest.js'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
-import { queryParams } from '@/utils/api'
+// import { queryParams } from '@/utils/api'
 export default {
     components: {
         posterlist,
@@ -29,11 +29,12 @@ export default {
       };
    },
     async created() {
-        const res = await queryParams()
-        console.log('created')
-        console.log(res)
+        // const res = await queryParams()
+        // const { data } = res;
         this.id = this.$route.query.id;
-        this.getCurrent(this.id)
+        this.getCurrentTemp(this.id)
+        console.log(this.currentTabComponent)
+        // this.getCurrent(this.id,data)
         this.setTitle(this.currentTabComponent.title)
         if(this.currentTabComponent.share)
             this.wxShare(this.currentTabComponent.share.title,this.currentTabComponent.share.desc,this.currentTabComponent.share.imgUrl)
@@ -41,8 +42,25 @@ export default {
    computed: {},
 
    methods: {
-       getCurrent(id) {
-           this.currentTabComponent = this.currentTabComponents.find(e=>e.id==id)
+        getCurrentTemp(id) {
+            this.currentTabComponent = this.currentTabComponents.find(e=>e.id==id)
+        },
+       getCurrent(id,data) {
+           const res = data.map(e=>{
+               const base64Res = e.content
+               const stringContent = this.base64Decode(base64Res)
+               let val ={};
+               try {
+                val = JSON.parse(stringContent)
+               } catch(e) {
+                val = {
+                    id:-1
+                }
+               }
+               return val
+            })
+           const content = res.find(e=>e.id==id)
+           this.currentTabComponent = content
        }
    },
 }
