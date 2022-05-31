@@ -1,31 +1,31 @@
 const param = [{
     title: '迅利A(波行版)',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052501/lALPJw1WSaG8T6fNBiDNAyA_800_1568.png?versionId=CAEQLhiBgICnm.TghxgiIDlmOTIzMDkzYzMyZDRhMDk4MDVkZGM1OGMyMDk4YTRj',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E8%BF%85%E5%88%A9A%20%E6%B3%A2%E8%A1%8C.JPG?version=CAEQLhiBgMCXo_LdiBgiIGMyMzNkMjExMTk4YzQzZTVhMGNkZjlmNWFhYWEyM2Ji',
     top: 208,
     bottom: 334,
   },{
     title: '迅利A(通用)',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052501/lALPJwY7TFgvT6TNBiDNAyA_800_1568.png?versionId=CAEQLhiBgMCYmuTghxgiIGIwZDY0ZDk1MmM4ZDQ4ZGZhMmQ1MzRlNDgwNTM2ZTUz',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E8%BF%85%E5%88%A9A.JPG?version=CAEQLhiBgICro_LdiBgiIDYzODI0NDMyZWI5ZDRjMmQ4Zjg0ZjZhN2FmOGVhNWU0',
     top: 208,
     bottom: 334,
   },{
     title: '迅利E(通用)',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052501/lALPJxf-xZAPz6HNBiDNAyA_800_1568.png?versionId=CAEQLhiBgICbmuTghxgiIGZhNjc1ZjU0MjlmMjQ5NjBiMjYzZmFiZTFmMzk5YjM2',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E8%BF%85%E5%88%A9E.JPG?version=CAEQLhiBgICao_LdiBgiIGM0NWU2YTNmZDUyODQzNDE5MzNmMTk3YjMwMzkyMmQw',
     top: 208,
     bottom: 334,
   },{
     title: '开泰C',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052501/lALPJwnIyvz1z53NBiDNAyA_800_1568.png?versionId=CAEQLhiBgMCamuTghxgiIDI5YjVhNTFmOGExNzRiMjhiMGE2ZjA4NWQ1Y2QyMjgx',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E5%BC%80%E6%B3%B0C.JPG?version=CAEQLhiBgICuo_LdiBgiIDJmMzczM2U2OTUzODQ1Mzg4YTBlODg5ODM0ZDE4MWEw',
     top: 208,
     bottom: 334,
   },{
     title: '开泰A',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052501/lALPJwnIyvz1z57NBiDNAyA_800_1568.png?versionId=CAEQLhiBgMCcmuTghxgiIGY3NzIzMmYwMDMxMTQ5MzY4Mzk5NTg3MDhhZGY0ZTQx',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E5%BC%80%E6%B3%B0A.JPG?version=CAEQLhiCgICro_LdiBgiIDJhZjczMGNjYjg2NDRhOGI5NGUzZDQ3MzBmYjIyZDEz',
     top: 208,
     bottom: 334,
   },{
@@ -37,19 +37,19 @@ const param = [{
   },{
     title: '安盈A',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052701/%E5%AE%89%E7%9B%88A.png?versionId=CAEQLhiBgMCI.4uQiBgiIGE4NDNjODFmNjljNjQ0MzA5N2RhOTBiNGQ2ODk5ODVh',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E5%AE%89%E7%9B%88A.JPG?version=CAEQLhiBgMCto_LdiBgiIDZlNTA3Yjc2ZDQxZjQ0YzFiYjgzY2M1ZDZjOGJlOGY2',
     top: 208,
     bottom: 334,
   },{
     title: '安盈AC',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052701/%E5%AE%89%E7%9B%88AC.png?versionId=CAEQLhiBgMCB.4uQiBgiIGY4Mjk4MzM1YjEzMTRhMmI5ZWI3NWE2MTU4NTA5MWQ0',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E5%AE%89%E7%9B%88AC.JPG?version=CAEQLhiBgMC0o_LdiBgiIGIxODM3YzFkNWExZTQwMzFhMWU4ZTAxYzQ1OWE1ZmY1',
     top: 208,
     bottom: 334,
   },{
     title: '华嘉',
     type: 'CZYHModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052501/lALPJxDjyEaCz5jNBiDNAyA_800_1568.png?versionId=CAEQLhiBgICcmuTghxgiIGUyYzc3MzRmYjgwZTQyNjM5ODU3M2NmNzQ5YjkwYzMx',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E5%8D%8E%E5%98%89.JPG?version=CAEQLhiBgMCRo_LdiBgiIDU3OGQ1YzZjYzBhMDQwYzQ4MDQ2YTA4ZDE5NWVkNzgz',
     top: 208,
     bottom: 334,
   },{
