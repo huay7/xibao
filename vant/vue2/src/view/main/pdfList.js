@@ -1,6 +1,26 @@
 const blcokA = [
     {
-        title: '固收',
+        title: '月度陪伴',
+        list: [
+            {
+                title:'永赢基金月度陪伴-2022年6月',
+                pdflist:[
+                    {
+                        type: 'pdf',
+                        name: '渠道版',
+                        url: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E6%B0%B8%E8%B5%A2%E5%9F%BA%E9%87%91%E6%9C%88%E5%BA%A6%E9%99%AA%E4%BC%B4-2022%E5%B9%B46%E6%9C%88%EF%BC%88%E6%B8%A0%E9%81%93%E7%89%88%EF%BC%89.pdf?version=CAEQLhiBgICC9PDliBgiIDkwNzEyNjY0M2E5ZjRlZTk5MWVmM2RlNWFiMDllZDk5',
+                    },
+                    {
+                        type: 'pdf',
+                        name: '公宣版',
+                        url: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E6%B0%B8%E8%B5%A2%E5%9F%BA%E9%87%91%E6%9C%88%E5%BA%A6%E9%99%AA%E4%BC%B4-2022%E5%B9%B46%E6%9C%88%EF%BC%88%E5%85%AC%E5%AE%A3%E7%89%88%EF%BC%89.pdf?version=CAEQLhiBgMCE9PDliBgiIGFiYmYyYjg5YTM1YzQwYzViOGYwZDc1MDRhZTQyNzhj',
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        title: '固收产品',
         list: [
             {
                 title:'永赢迅利中高等级短债（A类006852）',
@@ -105,7 +125,7 @@ const blcokA = [
         ]
     },
     {
-        title: '权益',
+        title: '权益产品',
         list: [
             {
                 title:'永赢智能领先（A类006266，C类006269）',
@@ -248,10 +268,10 @@ const blcokA = [
 
 export const pageD = {
     id:"004",
-    title:'产品季度材料合集',
+    title:'永赢产品定期材料合集',
     model:'pdflist',
     share:{
-      title:'产品季度材料，你想知道的都在这里啦！',
+      title:'产品定期材料，你想知道的都在这里啦！',
       desc:'',
       imgUrl:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052702/%E7%94%BB%E6%9D%BF%201%20%E6%8B%B7%E8%B4%9D.jpg?versionId=CAEQLhiBgICJpMaViBgiIGY2Yjc2NzE0YmEzODRlMjg5MGQ1ZjJmMmJkYzI4NWRk'
     },
