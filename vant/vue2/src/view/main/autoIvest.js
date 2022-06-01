@@ -1,7 +1,7 @@
 
 
 //海报列表配置
-export const pageB = {
+const pageB = {
     id:"001",
     title:'海报合集',
     model:'posterlist',
@@ -250,7 +250,7 @@ const blockB = {
     }
   ]
 }
-export const pageA = {
+const pageA = {
   id:"002",
   title:'定投资料包',
   model:'autoivestlist',
@@ -348,7 +348,7 @@ const blockB2 = {
     },
   ]
 }
-export const pageC = {
+const pageC = {
   id:"003",
   title:'资料合集',
   model:'commonlist',
@@ -359,3 +359,5 @@ export const pageC = {
   },
   param:[blockB2]
 }
+
+export {pageB,pageA,pageC}

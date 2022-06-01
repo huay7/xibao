@@ -266,7 +266,7 @@ const blcokA = [
     },
 ]
 
-export const pageD = {
+const pageD = {
     id:"004",
     title:'永赢产品定期材料合集',
     model:'pdflist',
@@ -277,3 +277,5 @@ export const pageD = {
     },
     param:blcokA
 }
+
+export {pageD}

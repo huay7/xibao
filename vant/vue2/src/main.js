@@ -4,7 +4,7 @@ import { router } from './router';
 import Vant from 'vant/lib/index';
 import clipboard from 'clipboard';
 import 'vant/lib/index.less';
-
+// import VConsole from 'vconsole'
 import { wxShare, setTitle ,getPDFDownLoadUrl,base64Decode,base64Encode } from './utils/util'
 
 //注册到vue原型上

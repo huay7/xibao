@@ -72,7 +72,7 @@ const param = [{
     bottom: 184,
   },]
 
-  export const pageE = {
+const pageE = {
     id:"005",
     title:'喜报',
     model:'celebrateposter',
@@ -83,3 +83,4 @@ const param = [{
     },
     param
 }
+export {pageE}

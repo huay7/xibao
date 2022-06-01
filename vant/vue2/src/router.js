@@ -32,7 +32,7 @@ const routes = [
     name: 'main',
     component: () => import('./view/main'),
     meta: {
-      title: 'main'
+      title: ''
     }
   },
 ];
