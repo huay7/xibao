@@ -4,12 +4,12 @@
         <van-grid-item v-for="(item,index) in param" :key="index">
             <van-image
                 width="100%"
-                height="100%"
+                height="260"
                 fit="cover"
                 :src="item.url"
                 @click="preview(item)"
             />
-            <van-button class="mt-8px" type="primary" :disabled="!item.text" @click="copyText(item.text)">复制文案</van-button>
+            <van-button size="small" color="#ff6e40" class="mt-8px" type="primary" :disabled="!item.text" @click="copyText(item.text)">复制文案</van-button>
         </van-grid-item>
     </van-grid>
   </div>
