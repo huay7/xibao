@@ -1,6 +1,11 @@
 <template>
    <div>
        <component :key="this.$route.query.id" :is="currentTabComponent.model" :param="currentTabComponent.param"></component>
+        <van-dialog v-model="isPwd" title="请输入密码" :beforeClose="this.beforeClose">
+            <template #default>
+                <van-field size="large" label-width="60px" clearable :border="true" :center="true" :colon="true" class="padding30" v-model="password" type="password" label="密码"/>
+            </template>
+        </van-dialog>
    </div>
 </template>
 
@@ -15,6 +20,9 @@ import { pageA,pageB,pageC } from './autoIvest.js'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK } from './test.js'
+import { pageM } from './monthReport.js'
+import { Notify } from 'vant';
+
 import { queryParams } from '@/utils/api'
 export default {
     components: {
@@ -27,31 +35,31 @@ export default {
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageM],
         currentTabComponent: {},
+        isPwd:false,
+        password:'',
+        passwordDefault:''
       };
    },
     async created() {
         this.id = this.$route.query.id;
 
-        const res = await queryParams()
-        console.log(res)
-
-        console.log('1')
-        const { data } = res;
-        console.log('2')
-
-        this.getCurrent(this.id,data)
-        console.log('3')
-
         // this.getCurrentTemp(this.id)
-        this.setTitle(this.currentTabComponent.title)
-        console.log('4')
 
+        const res = await queryParams()
+        const { data } = res;
+        this.getCurrent(this.id,data)
+        this.setTitle(this.currentTabComponent.title)
+        if(this.currentTabComponent.isPwd) {
+            console.log(window.localStorage.getItem(this.id))
+           if( window.localStorage.getItem(this.id)!=='true') {
+                this.isPwd = true
+                this.passwordDefault = this.currentTabComponent.passwordDefault
+            }
+        }
         if(this.currentTabComponent.share)
-            console.log('5')
             this.wxShare(this.currentTabComponent.share.title,this.currentTabComponent.share.desc,this.currentTabComponent.share.imgUrl)
-            console.log('6')
     },
    computed: {},
 
@@ -73,16 +81,30 @@ export default {
                }
                return val
             })
-           console.log('2.5')
-           console.log(res)
-
            const content = res.find(e=>e.id==id)
            this.currentTabComponent = content
-           console.log(this.currentTabComponent)
-       }
+        },
+        beforeClose(action, done) {
+            if (action === 'confirm') {
+                if(this.password == this.passwordDefault) {
+                    
+                    Notify({type: 'success',message:'密码正确',duration: 300,});
+                    window.localStorage.setItem(this.id,'true')
+                    done()
+                }else {
+                    Notify({message:'密码错误',duration: 800,});
+                    done(false)
+                }
+            } else {
+                done(false);
+            }
+        }
    },
 }
 </script>
 <style>
-
+.padding30 {
+    padding-left: 20%;
+    padding-right: 20%;
+}
 </style>
