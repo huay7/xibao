@@ -70,6 +70,12 @@ const param = [{
     img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/saleTop.jpg?versionId=CAEQLRiBgMDso7zYhhgiIDQ2MGYzZTkzMDIwZTQyNjI5NjgwNGQxYTM4ZjFjNmMy',
     top: 264,
     bottom: 184,
+  },{
+    title: '成长远航销量王者榜5',
+    type: 'CZYHSaleModel',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/saleTop.jpg?versionId=CAEQLRiBgMDso7zYhhgiIDQ2MGYzZTkzMDIwZTQyNjI5NjgwNGQxYTM4ZjFjNmMy',
+    top: 264,
+    bottom: 184,
   },]
 
 const pageE = {

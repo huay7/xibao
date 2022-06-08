@@ -9,7 +9,12 @@
         <van-field v-model="channelC" label="渠道C" />
         <van-field v-model="nameC" label="姓名C" />
         <van-field v-model="amountC"  label="金额C" />
-
+        <van-field v-model="channelD" label="渠道D" />
+        <van-field v-model="nameD" label="姓名D" />
+        <van-field v-model="amountD"  label="金额D" />
+        <van-field v-model="channelE" label="渠道E" />
+        <van-field v-model="nameE" label="姓名E" />
+        <van-field v-model="amountE"  label="金额E" />
         <van-button type="info ma-sm" @click="saveImg">保存并预览</van-button>
         <div class="flex justify-center ">
             <div id="toSave" class="save-container">
@@ -21,21 +26,35 @@
                                 <div class="font14">{{channelA}}</div>
                                 <div class="font18">{{nameA}}</div>
                             </div>
-                            <span class="font35 bold ml10">{{amountA}}</span>
+                            <span class="font30 bold ml10">{{amountA}}</span>
                         </div>
                         <div id="child2" class="child2 flex align-center bold">
                             <div class="width90 flex column align-end">
-                                <div class="font14">{{channelB}}</div>
-                                <div class="font18">{{nameB}}</div>
+                                <div class="font12">{{channelB}}</div>
+                                <div class="font16">{{nameB}}</div>
                             </div>
-                            <span class="font35 bold ml10">{{amountB}}</span>
+                            <span class="font30 bold ml10">{{amountB}}</span>
                         </div>
                         <div id="child3" class="child3 flex align-center bold">
                             <div class="width90 flex column align-end">
-                                <div class="font14">{{channelC}}</div>
-                                <div class="font18">{{nameC}}</div>
+                                <div class="font12">{{channelC}}</div>
+                                <div class="font16">{{nameC}}</div>
                             </div>
-                            <span class="font35 align-center ml10">{{amountC}}</span>
+                            <span class="font30 align-center ml10">{{amountC}}</span>
+                        </div>
+                        <div id="child4" class="child4 flex align-center bold">
+                            <div class="width90 flex column align-end">
+                                <div class="font12">{{channelD}}</div>
+                                <div class="font16">{{nameD}}</div>
+                            </div>
+                            <span class="font30 bold ml10">{{amountB}}</span>
+                        </div>
+                        <div id="child5" class="child5 flex align-center bold">
+                            <div class="width90 flex column align-end">
+                                <div class="font12">{{channelE}}</div>
+                                <div class="font16">{{nameE}}</div>
+                            </div>
+                            <span class="font30 align-center ml10">{{amountE}}</span>
                         </div>
                     </div>
                 </div>
@@ -110,7 +129,25 @@ export default {
        },
        amountC() {
            this.resetTextStyle()
-       }
+       },
+       channelD() {
+           this.resetTextStyle()
+       },
+       nameD() {
+           this.resetTextStyle()
+       },
+       amountD() {
+           this.resetTextStyle()
+       },
+       channelE() {
+           this.resetTextStyle()
+       },
+       nameE() {
+           this.resetTextStyle()
+       },
+       amountE() {
+           this.resetTextStyle()
+       }       
    },
    data () {
       return {
@@ -119,12 +156,18 @@ export default {
           channelA:'',
           channelB:'',
           channelC:'',
+          channelD:'',
+          channelE:'',
           nameA:'',
           nameB:'',
           nameC:'',
+          nameD:'',
+          nameE:'',
           amountA:'',
           amountB:'',
           amountC:'',
+          amountD:'',
+          amountE:'',
           //html2Canvs保存图片使用
           imgWidth:0,
           imgHeight:0,
@@ -184,6 +227,8 @@ export default {
                 const child1 = document.getElementById('child1')
                 const child2 = document.getElementById('child2')
                 const child3 = document.getElementById('child3')
+                const child4 = document.getElementById('child4')
+                const child5 = document.getElementById('child5')
                 //   //设置父componengt大小
                 //设置channel
                 const textBlock = document.getElementById('box');
@@ -204,6 +249,13 @@ export default {
                 child3.style['width'] = getPxString(window.vueThis1.amountWidth)
                 child3.style['font-size'] = getPxString(window.vueThis1.amountTextSize)
                 // child3.style['color'] = getPxString(window.vueThis1.amountTextColor)
+                child4.style['margin-top'] = getPxString(window.vueThis1.amountTop)
+                child4.style['width'] = getPxString(window.vueThis1.amountWidth)
+                child4.style['font-size'] = getPxString(window.vueThis1.amountTextSize)
+
+                child5.style['margin-top'] = getPxString(window.vueThis1.amountTop)
+                child5.style['width'] = getPxString(window.vueThis1.amountWidth)
+                child5.style['font-size'] = getPxString(window.vueThis1.amountTextSize)
             }
             },0)
         },
@@ -283,14 +335,35 @@ export default {
     text-align:center;
     word-break: break-all;
 }
+.child4 {
+    font-weight: bold;
+    color: #FDEEC5;
+    text-align:center;
+    word-break: break-all;
+}
+.child5 {
+    font-weight: bold;
+    color: #FDEEC5;
+    text-align:center;
+    word-break: break-all;
+}
+.font12 {
+    font-size: 12px;
+}
 .font14 {
+    font-size: 14px;
+}
+.font16 {
     font-size: 16px;
 }
 .font18 {
+    font-size: 18px;
+}
+.font20 {
     font-size: 20px;
 }
-.font35 {
-    font-size: 35px;
+.font30 {
+    font-size: 30px;
 }
 .width90 {
     width: 100px;
