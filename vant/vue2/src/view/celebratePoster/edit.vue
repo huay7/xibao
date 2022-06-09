@@ -18,6 +18,12 @@
                 :PaddingBottom="this.bottom"
                 :imgSrc="this.img"
             />
+            <CZYHSaleTopModelFive
+                v-if="this.type=='CZYHSaleTopModelFive'"
+                :PaddingTop="this.top"
+                :PaddingBottom="this.bottom"
+                :imgSrc="this.img"
+            />
    </div>
 </template>
 
@@ -26,11 +32,13 @@
 // import { Row, Col, Icon, Button, ImagePreview, NavBar, Field } from 'vant';
 import CZYHModel from './components/CZYHModel.vue'
 import CZYHSaleTopModel from './components/CZYHSaleTopModel.vue'
+import CZYHSaleTopModelFive from './components/CZYHSaleTopModelFive.vue'
 
 export default {
     components: {
         CZYHModel,
-        CZYHSaleTopModel
+        CZYHSaleTopModel,
+        CZYHSaleTopModelFive
    },
    data () {
       return {
