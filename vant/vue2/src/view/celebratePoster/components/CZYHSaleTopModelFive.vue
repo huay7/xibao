@@ -47,7 +47,7 @@
                                 <div class="font12">{{channelD}}</div>
                                 <div class="font16">{{nameD}}</div>
                             </div>
-                            <span class="font30 bold ml10">{{amountB}}</span>
+                            <span class="font30 bold ml10">{{amountD}}</span>
                         </div>
                         <div id="child5" class="child5 flex align-center bold">
                             <div class="width90 flex column align-end">
