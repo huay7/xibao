@@ -23,38 +23,38 @@
                     <div id="box" class="box">
                         <div id="child1" class="child1 flex align-center bold">
                             <div class="width90 flex column align-end">
-                                <div class="font14">{{channelA}}</div>
-                                <div class="font18">{{nameA}}</div>
+                                <div class="font12">{{channelA}}</div>
+                                <div class="font14">{{nameA}}</div>
                             </div>
-                            <span class="font30 bold ml10">{{amountA}}</span>
+                            <span class="font20 bold ml10">{{amountA}}</span>
                         </div>
                         <div id="child2" class="child2 flex align-center bold">
                             <div class="width90 flex column align-end">
                                 <div class="font12">{{channelB}}</div>
-                                <div class="font16">{{nameB}}</div>
+                                <div class="font14">{{nameB}}</div>
                             </div>
-                            <span class="font30 bold ml10">{{amountB}}</span>
+                            <span class="font20 bold ml10">{{amountB}}</span>
                         </div>
                         <div id="child3" class="child3 flex align-center bold">
                             <div class="width90 flex column align-end">
                                 <div class="font12">{{channelC}}</div>
-                                <div class="font16">{{nameC}}</div>
+                                <div class="font14">{{nameC}}</div>
                             </div>
-                            <span class="font30 align-center ml10">{{amountC}}</span>
+                            <span class="font20 align-center ml10">{{amountC}}</span>
                         </div>
                         <div id="child4" class="child4 flex align-center bold">
                             <div class="width90 flex column align-end">
                                 <div class="font12">{{channelD}}</div>
-                                <div class="font16">{{nameD}}</div>
+                                <div class="font14">{{nameD}}</div>
                             </div>
-                            <span class="font30 bold ml10">{{amountD}}</span>
+                            <span class="font20 bold ml10">{{amountB}}</span>
                         </div>
                         <div id="child5" class="child5 flex align-center bold">
                             <div class="width90 flex column align-end">
                                 <div class="font12">{{channelE}}</div>
-                                <div class="font16">{{nameE}}</div>
+                                <div class="font14">{{nameE}}</div>
                             </div>
-                            <span class="font30 align-center ml10">{{amountE}}</span>
+                            <span class="font20 align-center ml10">{{amountE}}</span>
                         </div>
                     </div>
                 </div>

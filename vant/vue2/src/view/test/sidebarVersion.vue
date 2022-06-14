@@ -20,7 +20,7 @@
                                     height="100px"
                                     fit="cover"
                                     :src="require('./banner.jpg')"
-                                    @click="preview"
+                                    @click="jump('https://docs.qq.com/scenario/recieve-template.html?packId=ATtRDu9GWhb90Hfu5AB9tT2OPzHtPeYAog%2FopqOVW7M8NjtAsKgc8BiisEiuRloi')"
                                     :key="value" 
                                 />
                                 <van-image
@@ -30,7 +30,7 @@
                                     height="100px"
                                     fit="cover"
                                     :src="require('./banner1.jpg')"
-                                    @click="preview"
+                                    @click="jump('https://docs.qq.com/form/page/sequence/DSWtoWmlpTUdtQmdX')"
                                     :key="value" 
                                 />
                                 <van-image
@@ -40,7 +40,7 @@
                                     height="100px"
                                     fit="cover"
                                     :src="require('./banner2.jpg')"
-                                    @click="preview"
+                                    @click="jump('https://docs.qq.com/form/page/sheet/yGIF8jfFVBDjkBf')"
                                     :key="value" 
                                 />
                                 <van-image
@@ -212,6 +212,9 @@ export default {
     ]
   },
   methods:{
+      jump(url) {
+          window.location.href=url
+      }
   }
 };
 </script>

@@ -72,9 +72,15 @@ const param = [{
     bottom: 184,
   },{
     title: '成长远航销量王者榜5',
-    type: 'CZYHSaleModel',
-    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022051801/saleTop.jpg?versionId=CAEQLRiBgMDso7zYhhgiIDQ2MGYzZTkzMDIwZTQyNjI5NjgwNGQxYTM4ZjFjNmMy',
-    top: 264,
+    type: 'CZYHSaleTopModelFive',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-9/2476D35C-0D60-43BA-8A9C-4420BF7D1E3C-78024-00002DF864A756BA.png?version=CAEQMRiBgIDO4c6XihgiIGRkMDFkNzAxZDFiYjRmNGNhYjBkYzMxMDUzMDY4ZDhj',
+    top: 324,
+    bottom: 184,
+  },{
+    title: '成长远航销量王者榜5',
+    type: 'CZYHSaleTopModelFive',
+    img: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-9/0850BF0C-785D-4286-AF53-72A1983BEFB4-78024-00002DF86AEF91C5.png?version=CAEQMRiBgMCHiN.XihgiIDk3ODBiMjE4OTllMjQ4OGY4MDdlMTE5YjFlYWY0YTc1',
+    top: 304,
     bottom: 184,
   },]
 

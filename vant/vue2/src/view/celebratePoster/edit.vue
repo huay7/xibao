@@ -19,7 +19,7 @@
                 :imgSrc="this.img"
             />
             <CZYHSaleTopModelFive
-                v-if="this.type=='CZYHSaleModel'"
+                v-if="this.type=='CZYHSaleTopModelFive'"
                 :PaddingTop="this.top"
                 :PaddingBottom="this.bottom"
                 :imgSrc="this.img"

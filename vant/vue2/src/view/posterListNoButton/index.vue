@@ -9,14 +9,13 @@
                 :src="item.url"
                 @click="preview(item)"
             />
-            <van-button size="small" color="#ff6e40" class="mt-8px" type="primary" :disabled="!item.text" @click="copyText(item.text)">复制文案</van-button>
         </van-grid-item>
     </van-grid>
   </div>
 </template>
 
 <script>
-import { Dialog, ImagePreview } from 'vant';
+import { ImagePreview } from 'vant';
 // import wx from '../../js/jweixin-1.6.0'
 export default {
   props:{
@@ -33,19 +32,6 @@ export default {
       preview(item) {
         ImagePreview([item.url]);
       },
-      copyText(text) {
-        let textNew;
-        textNew = text.replaceAll('<br>', '\n')
-        textNew = textNew.replaceAll('<br/>', '\n')
-        // const temp = new this.clipboard(textNew)
-        this.clipboard.copy(textNew)
-        Dialog.alert({
-            title: '复制成功',
-            message: text,
-        }).then(() => {
-            // on close
-        });
-      }
   }
 };
 </script>
