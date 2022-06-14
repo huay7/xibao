@@ -11,7 +11,10 @@
 
 <script>
 import posterlist from '../posterList'
+import posterlistnobutton from '../posterListNoButton'
+import videolist from '../videoList'
 import autoivestlist from '../autoIvestList'
+import guzhaipoint from '../guzhaiPoint'
 import commonlist from '../commonList'
 import pdflist from '../pdfList'
 import celebrateposter from '../celebratePoster'
@@ -22,13 +25,17 @@ import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK,pageZ } from './test.js'
 import { pageM } from './monthReport.js'
+import { pageY,pageT, pageP } from './guzhaiPoint.js'
 import { Notify } from 'vant';
 
 import { queryParams } from '@/utils/api'
 export default {
     components: {
         posterlist,
+        posterlistnobutton,
+        videolist,
         autoivestlist,
+        guzhaipoint,
         commonlist,
         pdflist,
         celebrateposter,
@@ -37,7 +44,7 @@ export default {
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageM,pageZ],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageM,pageZ,pageY,pageT,pageP],
         currentTabComponent: {},
         isPwd:false,
         password:'',
