@@ -8,7 +8,7 @@
               <van-list>
                 <van-cell v-for="(grandchilditem,grandchildindex) in childitem.list" :key="grandchildindex" >
                     <van-row @click="listClik(grandchilditem)">
-                      <van-col>
+                      <van-col class="iconstyle">
                         <!-- <van-icon v-if="grandchilditem.type=='img'" name="photo-o" />
                         <van-icon v-else name="guide-o" /> -->
                         <van-icon v-if="grandchilditem.icon"  size="24"  :name="grandchilditem.icon" />
@@ -123,5 +123,13 @@ export default {
     font-size: 14px;
     color: #333;
   }
+}
+.van-col{
+  display: flex;
+  align-items: center;
+}
+.iconstyle{
+  display: flex;
+  align-items: flex-start;
 }
 </style>
