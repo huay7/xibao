@@ -18,13 +18,11 @@ import guzhaipoint from '../guzhaiPoint'
 import commonlist from '../commonList'
 import pdflist from '../pdfList'
 import celebrateposter from '../celebratePoster'
-import monthreport from '../monthReport'
 import sidebarVersion from '../test/sidebarVersion.vue'
 import { pageA,pageB,pageC } from './autoIvest.js'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK,pageZ } from './test.js'
-import { pageM } from './monthReport.js'
 import { pageY,pageT, pageP } from './guzhaiPoint.js'
 import { Notify } from 'vant';
 
@@ -39,12 +37,11 @@ export default {
         commonlist,
         pdflist,
         celebrateposter,
-        monthreport,
         sidebarVersion
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageM,pageZ,pageY,pageT,pageP],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP],
         currentTabComponent: {},
         isPwd:false,
         password:'',

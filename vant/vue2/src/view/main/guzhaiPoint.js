@@ -110,9 +110,9 @@ const pageP = {
   title:'直播合集',
   model:'posterlistnobutton',
   share:{
-    title:'【同赢未来】玩转定投，你想知道的都在这里啦！',
+    title:'',
     desc:'',
-    imgUrl:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052702/%E5%88%86%E4%BA%AB%E5%9B%BE.jpg?versionId=CAEQLhiBgICYy7SViBgiIGQ5ZjY3MDFlMTA3YTRjMzJhZTRlZDZhZGU1MmJmZDdl'
+    imgUrl:''
   },
   param:[
     {
@@ -144,10 +144,12 @@ const pageY = {
     {
       title:"惊呆！美国22年来最大加息来了！A股如何应对！",
       url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-10/%E6%83%8A%E5%91%86%EF%BC%81%E7%BE%8E%E5%9B%BD22%E5%B9%B4%E6%9D%A5%E6%9C%80%E5%A4%A7%E5%8A%A0%E6%81%AF%E6%9D%A5%E4%BA%86%EF%BC%81A%E8%82%A1%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9%EF%BC%81.MP4?versionId=CAEQMRiBgMCR0N2vihgiIGY1NjcyZjFiMDIxZjRhNmVhNDQxYWQ3OGYyNTRmZTM0',
+      poster:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-14/IMG_7618.PNG?version=CAEQMRiBgIDvscOFixgiIDM5NTM1OWQyODBkNTQxYzdhNmQ1NDkzMTk1NTNkODQz'
     },
     {
       title:"美国通胀拐点已至，可以考虑左侧布局了？",
-      url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-10/%E7%BE%8E%E5%9B%BD%E9%80%9A%E8%83%80%E6%8B%90%E7%82%B9%E5%B7%B2%E8%87%B3%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%80%83%E8%99%91%E5%B7%A6%E4%BE%A7%E5%B8%83%E5%B1%80%E4%BA%86%EF%BC%9F.MP4?versionId=CAEQMRiBgMCK0N2vihgiIDQ4MzBkOGUwZjlmZTQ5MTliNDA3NjkyOWVjODRmMmFk'
+      url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-10/%E7%BE%8E%E5%9B%BD%E9%80%9A%E8%83%80%E6%8B%90%E7%82%B9%E5%B7%B2%E8%87%B3%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%80%83%E8%99%91%E5%B7%A6%E4%BE%A7%E5%B8%83%E5%B1%80%E4%BA%86%EF%BC%9F.MP4?versionId=CAEQMRiBgMCK0N2vihgiIDQ4MzBkOGUwZjlmZTQ5MTliNDA3NjkyOWVjODRmMmFk',
+      poster:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-14/IMG_7615.PNG?version=CAEQMRiBgIDgscOFixgiIDAwNzJmYzA5YmYwMjRhMTQ5YmVlOTU4YjI3YWMyNmZj'
     },
     {
       title:"什么？美国经济正在衰退！A股将会怎么走？",
