@@ -9,6 +9,11 @@ const blcokA = [
                         type: 'pdf',
                         name: '渠道版',
                         url: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E6%B0%B8%E8%B5%A2%E5%9F%BA%E9%87%91%E6%9C%88%E5%BA%A6%E9%99%AA%E4%BC%B4-2022%E5%B9%B46%E6%9C%88%EF%BC%88%E6%B8%A0%E9%81%93%E7%89%88%EF%BC%89.pdf?version=CAEQLhiBgICC9PDliBgiIDkwNzEyNjY0M2E5ZjRlZTk5MWVmM2RlNWFiMDllZDk5',
+                        pdf:{
+                            ios:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-6/%E5%AE%81%E8%A1%8C%E7%A7%81%E9%93%B6%E6%B2%AA%E6%B8%AF%E6%B7%B1%E4%B8%80%E6%9C%9F%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92%E8%BF%90%E4%BD%9C%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%B1%95%E6%9C%9B%EF%BC%882022%E5%B9%B44%E6%9C%88%EF%BC%89.pdf?version=CAEQLhiBgMC2mvbiiRgiIDc3NGFkZWM1NjJhZDRhYmM5M2VjOTVjMDQzNTJkMjll',
+                            android:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-6/%E5%AE%81%E8%A1%8C%E7%A7%81%E9%93%B6%E6%B2%AA%E6%B8%AF%E6%B7%B1%E4%B8%80%E6%9C%9F%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92%E8%BF%90%E4%BD%9C%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%B1%95%E6%9C%9B%EF%BC%882022%E5%B9%B44%E6%9C%88%EF%BC%89.pdf?version=CAEQLhiBgIDApfbiiRgiIDQ1YzIwNjA1YTQyZTRhZDk5NzIxNTg5NzRhYzQ3ODgw',
+                            online:''
+                        },
                     },
                     {
                         type: 'pdf',

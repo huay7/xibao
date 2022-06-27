@@ -6,7 +6,13 @@
                     <van-collapse v-model="activeNames[index]">
                         <van-collapse-item v-for="(childitem,childindex) in item.list" :key="childindex" :title="childitem.title" :name="childindex">
                             <van-grid :border="false" direction="horizontal" :column-num="2">
-                                <van-grid-item @click="detailClick(grandchilditem)" v-for="(grandchilditem,grandchildindex) in childitem.pdflist" :key="grandchildindex" icon="https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052001/%E7%94%BB%E6%9D%BF%201.jpg?versionId=CAEQLRiBgIDvpJOEhxgiIGNhZDJhMzlkMWQ5NzRhODE5MTA1YWVjOTZjMWI0MDk1" :text="grandchilditem.name" />
+                                <van-grid-item
+                                  @click="detailClick(grandchilditem)"
+                                  v-for="(grandchilditem,grandchildindex) in childitem.pdflist"
+                                  :key="grandchildindex"
+                                  icon="https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052001/%E7%94%BB%E6%9D%BF%201.jpg?versionId=CAEQLRiBgIDvpJOEhxgiIGNhZDJhMzlkMWQ5NzRhODE5MTA1YWVjOTZjMWI0MDk1"
+                                  :text="grandchilditem.name" 
+                                />
                             </van-grid>
                         </van-collapse-item>
                     </van-collapse>
@@ -37,7 +43,8 @@ export default {
       detailClick(item) {
           if(item.type=='pdf') {
             var link = document.createElement('a');
-            link.setAttribute("href", item.url);
+            const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
+            link.setAttribute("href", downloadUrl);
             link.setAttribute("download", '测试下载.pdf');
             var evObj = document.createEvent('MouseEvents');
             evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
