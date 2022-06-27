@@ -31,6 +31,20 @@
                         @click="detailClick(grandgrandchilditem)"
                     />
                 </van-row>
+                <van-row v-if="childitem.isWithPoster">
+                  <van-grid :column-num="3">
+                    <van-grid-item v-for="(grandchilditem,grandchildindex) in childitem.posterList" :key="grandchildindex">
+                      <van-image
+                          width="100%"
+                          height="220"
+                          fit="cover"
+                          :src="grandchilditem.titlePicture"
+                          @click="detailPosterClick(grandchilditem)"
+                      />
+                      <span class="poster">{{grandchilditem.title}}</span> 
+                    </van-grid-item>
+                  </van-grid>
+                </van-row>
               </div>
               <div class="bloackA" v-if="childitem.type=='poster'">
                 <van-grid :gutter="10">
@@ -95,6 +109,9 @@ export default {
             this.$router.push({name: item.url ,query: item.query});
           }
     },
+    detailPosterClick(item) {
+        this.$router.push({name: item.url ,query: item.query});
+    },
     preview(url) {
       ImagePreview([url]);
     },
@@ -132,5 +149,9 @@ export default {
 .bloackA {
   padding-top:12px;
   padding-bottom:12px;
+}
+.poster {
+  margin-top: 6px;
+  font-size: 14px;
 }
 </style>

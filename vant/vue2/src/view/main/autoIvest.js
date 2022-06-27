@@ -69,10 +69,52 @@ const blockA = {
       ]
     },
     {
-      title:'定投Q&A',
-      type: 'poster',
-      list: ['https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%9C%A8%E4%BB%BB%E4%BD%95%E5%B8%82%E5%9C%BA%E7%8E%AF%E5%A2%83%E4%B8%8B%EF%BC%8C%E5%AE%9A%E6%8A%95%E9%83%BD%E6%98%AF%E5%B8%B8%E8%83%9C%E5%B0%86%E5%86%9B%E5%90%97%EF%BC%9F.jpg?versionId=CAEQLRiBgMD82PaDhxgiIDI0YjkyYWU4Mjg3ZjQ3ODA4MzQzMDNhYjBlM2QzNDQz','https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/IMG_6991.JPG?versionId=CAEQLhiBgID698L_hxgiIDRiNGIxMmU3YmYxYTQzYjA5NmVjNWNiZDM3YmU5MTc3']
-    },
+      title:'定投素材',
+      type: 'pdf',
+      isWithPoster:true,
+      list:[
+        [
+          {
+            type: 'pdf',
+            titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/icon2-1.jpg?versionId=CAEQLhiBgMDOqbX.hxgiIGQxMjhmZGMyYTE2YTRkNTI5NDJmZDNlMGQ4OWJlZDll',
+            url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E5%90%8C%E8%B5%A2%E6%9C%AA%E6%9D%A5%C2%B7%E7%8E%A9%E8%BD%AC%E5%AE%9A%E6%8A%95%20-%E6%8C%87%E6%95%B0%E7%AF%87%20(A).pdf?version=CAEQLhiCgMDr5cjyiBgiIDI5NWEwYWE5ZDRjMzRjZDg4NDU1MmYzNDEzNzIzODlm'
+          },
+          {
+            type: 'pdf',
+            titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/icon2-2.jpg?versionId=CAEQLhiBgICjqbX.hxgiIDEzN2YyNTA4MWJkZDQ2YjU5NDhlMTFmNjVkNGIxYjZj',
+            url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052002/%E3%80%90%E5%90%8C%E8%B5%A2%E6%9C%AA%E6%9D%A5%E3%80%91%E7%8E%A9%E8%BD%AC%E5%AE%9A%E6%8A%95.pdf?versionId=CAEQLRiBgIDct5mDhxgiIDA5N2U3ZDA0Y2I4ZDQ0MjFhNDYxYzBlYzUzOGY0YWJl'
+          },
+        ],
+        [
+          {
+            type: 'href',
+            titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/icon2-3.jpg?versionId=CAEQLhiBgIDrqbX.hxgiIGIwOTgzZTllZGM1NjQ4MzA4M2IxZjA1ZmVlZDZkMTc3',
+            url:'main',
+            query:{id:'003'}
+          },
+          {
+            type: 'href',
+            titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/icon2-4.jpg?versionId=CAEQLhiBgIDPqbX.hxgiIGQ5YmYxZDEyMjdiMTQ0YjJhZDBkODFjNTViYTUxOTNm',
+            url:'main',
+            query:{id:'001'}
+          },
+        ]
+      ],
+      posterList:[
+        {
+          title:'自己运营',
+          titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A51.jpg',
+          url:'main',
+          query:{id:'003'}
+        },
+        {
+          title:'自己运营',
+          titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A51.jpg',
+          url:'main',
+          query:{id:'003'}
+        }
+      ]
+    }
   ]
 }
 const blockB = {
