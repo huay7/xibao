@@ -31,7 +31,7 @@
                         @click="detailClick(grandgrandchilditem)"
                     />
                 </van-row>
-                <van-row v-if="childitem.isWithPoster">
+                <van-row v-if="childitem.isWithPoster" class="poster-row">
                   <van-grid :column-num="3">
                     <van-grid-item v-for="(grandchilditem,grandchildindex) in childitem.posterList" :key="grandchildindex">
                       <van-image
@@ -100,7 +100,8 @@ export default {
     detailClick(item) {
           if(item.type=='pdf') {
             var link = document.createElement('a');
-            link.setAttribute("href", item.url);
+            const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
+            link.setAttribute("href", downloadUrl);
             link.setAttribute("download", '测试下载.pdf');
             var evObj = document.createEvent('MouseEvents');
             evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
@@ -148,10 +149,13 @@ export default {
 }
 .bloackA {
   padding-top:12px;
-  padding-bottom:12px;
+  // padding-bottom:12px;
 }
 .poster {
   margin-top: 6px;
   font-size: 14px;
+}
+.poster-row {
+  margin-top: 16px;
 }
 </style>

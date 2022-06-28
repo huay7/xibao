@@ -44,7 +44,11 @@ const blockA = {
           {
             type: 'pdf',
             titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/icon2-1.jpg?versionId=CAEQLhiBgMDOqbX.hxgiIGQxMjhmZGMyYTE2YTRkNTI5NDJmZDNlMGQ4OWJlZDll',
-            url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/20220531/%E5%90%8C%E8%B5%A2%E6%9C%AA%E6%9D%A5%C2%B7%E7%8E%A9%E8%BD%AC%E5%AE%9A%E6%8A%95%20-%E6%8C%87%E6%95%B0%E7%AF%87%20(A).pdf?version=CAEQLhiCgMDr5cjyiBgiIDI5NWEwYWE5ZDRjMzRjZDg4NDU1MmYzNDEzNzIzODlm'
+            pdf:{
+              ios:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%95%E6%8E%A8%E8%8D%90-%E6%B0%B8%E8%B5%A2%E7%B2%BE%E5%93%81%E5%9F%BA%E9%87%91%EF%BC%88%E6%A0%87%E5%87%86%E7%89%88%EF%BC%89.pdf',
+              android:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052702/%E5%AE%9A%E6%8A%95%E6%8E%A8%E8%8D%90-%E6%B0%B8%E8%B5%A2%E7%B2%BE%E5%93%81%E5%9F%BA%E9%87%91%EF%BC%88%E6%A0%87%E5%87%86%E7%89%88%EF%BC%89.pdf?versionId=CAEQLhiBgMDgoaeXiBgiIGU1ZjYwMGQ3NDI3MDQ0NzJhYTBmZDBiNGM0MzBmZTA4',
+              online:''
+            },
           },
           {
             type: 'pdf',
