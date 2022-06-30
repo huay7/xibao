@@ -22,7 +22,7 @@
 
     <!-- 四项 -->
     <van-grid :border="false" :column-num="1" class="block imgbox">
-      <img src="./image/bg2.png" alt="" style="width: 100%;border-radius: 0.5rem;">
+      <!-- <img src="./image/bg2.png" alt="" style="width: 100%;border-radius: 0.5rem;"> -->
       <div class="imgcontent">
         <van-row v-for="(grandchilditem,grandchildindex) in param[0].fourList" :key="grandchildindex">
             <van-col v-if="grandchilditem.title1" class="imgsty img1sty"  v-html="grandchilditem.title1" @click="productClick(grandchilditem.url1)"></van-col>
@@ -186,7 +186,6 @@ h6{
   margin: 0 auto;
 }
 .imgsty{
-  position: absolute;
   width: 134px;
   height: 34px;
   background-image: url(./image/bg1.png);
@@ -198,39 +197,18 @@ h6{
   padding-left: 5px;
 }
 .img1sty{
-  bottom: 3rem;
-  left: 20px;
+  margin-top: 50%;
+  margin-left: 20px;
 }
 .img11sty{
-  bottom: 0.6rem;
-  left: 20px;
-}
-.img2sty{
-  bottom: 3rem;
-  right: 20px;
-}
-.img22sty{
-  bottom: 0.6rem;
-  right: 20px;
-}
-.img3sty{
-  bottom: 3rem;
-  left: 20px;
-}
-.img33sty{
-  bottom: 0.6rem;
-  left: 20px;
-}
-.img4sty{
-  bottom: 3rem;
-  right: 20px;
-}
-.img44sty{
-  bottom: 0.6rem;
-  right: 20px;
+  margin-top: 0.2rem;
+  margin-left: 20px;
 }
 .imgbox{
   position: relative;
+  background-image: url(./image/bg2.png);
+  background-size: 100% 100%;
+  height: 20.5rem;
   .imgcontent{
     position: absolute;
     width: 100%;
@@ -238,11 +216,6 @@ h6{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
-    /deep/ .van-row{
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
   }
 }
 .van-col{
