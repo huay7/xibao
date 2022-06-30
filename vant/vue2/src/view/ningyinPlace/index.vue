@@ -25,8 +25,8 @@
       <img src="./image/bg2.png" alt="" style="width: 100%;border-radius: 0.5rem;">
       <div class="imgcontent">
         <van-row v-for="(grandchilditem,grandchildindex) in param[0].fourList" :key="grandchildindex">
-            <van-col v-if="grandchilditem.title1" class="imgsty" :class="grandchilditem.className1" v-html="grandchilditem.title1"></van-col>
-            <van-col v-if="grandchilditem.title2" class="imgsty" :class="grandchilditem.className2" v-html="grandchilditem.title2"></van-col>
+            <van-col v-if="grandchilditem.title1" class="imgsty img1sty"  v-html="grandchilditem.title1" @click="productClick(grandchilditem.url1)"></van-col>
+            <van-col v-if="grandchilditem.title2" class="imgsty img11sty"  v-html="grandchilditem.title2" @click="productClick(grandchilditem.url2)"></van-col>
         </van-row>
       </div>
     </van-grid>  
@@ -38,7 +38,7 @@
 
     <van-grid :border="false" :column-num="1" class="block">
       <van-cell v-for="(grandchilditem,grandchildindex) in param[0].list" :key="grandchildindex">
-        <van-row @click="listClik(grandchilditem)">
+        <van-row @click="productClick(grandchilditem.url)">
           <van-col class="iconstyle">
             <van-icon v-if="grandchilditem.icon"  size="24"  :name="require('./image/icon1.png')" />
           </van-col>
@@ -55,12 +55,12 @@
     <!-- 卡片 -->
     <van-grid :border="false" :column-num="1" class="block" v-for="(grandchilditem,grandchildindex) in param[0].cardList" :key="grandchildindex">
       <van-row>
-        <img :src="grandchilditem.src" alt="" style="width: 100%;border-radius: 0.5rem;" @click="listClik(grandchilditem)">
+        <img :src="grandchilditem.src" alt="" style="width: 100%;border-radius: 0.5rem;" @click="productClick(grandchilditem.url)">
       </van-row>    
     </van-grid>  
 
     <van-grid :border="false" :column-num="1" class="block">
-      <div class="buttonsty">点击了解更多产品</div>   
+      <div class="buttonsty"  @click="productClick(param[0].lastUrl)">点击了解更多产品</div>   
     </van-grid>  
 
     <van-grid :border="false" :column-num="1" class="block ">
@@ -103,18 +103,23 @@ export default {
     urlClick(item) {
         this.$router.push({name: item.url ,query: item.query});
     },
-    listClik(item) {
-      var link = document.createElement('a');
-      const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
-      link.setAttribute("href", downloadUrl);
-      link.setAttribute("download", '测试下载.pdf');
-      var evObj = document.createEvent('MouseEvents');
-      evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-      link.dispatchEvent(evObj);
-    },
-    preview(url) {
-      ImagePreview([url]);
-    },
+    productClick(item) {
+      if(item.type=='img') {
+        ImagePreview([item.img]);
+      } else if (item.type=='pdf'||item.type=='block') {
+        var link = document.createElement('a');
+        const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
+        link.setAttribute("href", downloadUrl);
+        link.setAttribute("download", '测试下载.pdf');
+        var evObj = document.createEvent('MouseEvents');
+        evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        link.dispatchEvent(evObj);
+      } else if(item.type=='innerhref') {
+        this.$router.push({name: item.url ,query: item.query});
+        }else {
+        window.location.href = item.href
+      } 
+    }
   }
 };
 </script>
