@@ -19,11 +19,13 @@ import commonlist from '../commonList'
 import pdflist from '../pdfList'
 import celebrateposter from '../celebratePoster'
 import sidebarVersion from '../test/sidebarVersion.vue'
+import ningyinPlace from "../ningyinPlace"
 import { pageA,pageB,pageC } from './autoIvest.js'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK,pageZ } from './test.js'
 import { pageY,pageT, pageP } from './guzhaiPoint.js'
+import { pageG } from './ningyinPlace.js'
 import { Notify } from 'vant';
 
 import { queryParams } from '@/utils/api'
@@ -37,11 +39,12 @@ export default {
         commonlist,
         pdflist,
         celebrateposter,
-        sidebarVersion
+        sidebarVersion,
+        ningyinPlace
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG],
         currentTabComponent: {},
         isPwd:false,
         password:'',
