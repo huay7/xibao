@@ -82,7 +82,7 @@ export default {
         getCurrent(id,data) {
            const res = data.map(e=>{
                const base64Res = e.content
-               const stringContent = this.base64Decode(base64Res)
+               const stringContent = this.base64Decode(base64Res.replace(/\?/g, '/').replace(/!/g, '+'))
                let val ={};
                try {
                 val = JSON.parse(stringContent)
