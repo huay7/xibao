@@ -1,35 +1,30 @@
-
-
 //海报列表配置
 const blockA = {
-  param:[
+  list:[
     {
       text: '固收',  
-      url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A51.jpg',
+      icon:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A51.jpg',
     },
     {
       text: '权益',   
-      url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A52.jpg'
+      icon:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/520%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A52.jpg'
     },
     {
       text: '月度陪伴',   
-      url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%8D%8E%E5%98%89%E4%BF%A1%E7%94%A8%E5%80%BA%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A5.JPG'
+      icon:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%8D%8E%E5%98%89%E4%BF%A1%E7%94%A8%E5%80%BA%E5%AE%9A%E6%8A%95%E6%B5%B7%E6%8A%A5.JPG'
     },
     {
       text: '专户',   
-      url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%951.jpg'
+      icon:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%951.jpg'
     },
     {
       text: '专户5',
-      url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%952.jpg'
+      icon:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%952.jpg'
     },
   ]
 }
 
-
-
-
-const blockB2 = {
+const blockB = {
   type: 'list',
   list: [
     {
@@ -52,8 +47,8 @@ const blockB2 = {
             android:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052702/%E5%AE%9A%E6%8A%95%E6%8E%A8%E8%8D%90-%E6%B0%B8%E8%B5%A2%E5%88%9B%E4%B8%9A%E6%9D%BF%E3%80%81%E6%B0%B8%E8%B5%A2%E6%B2%AA%E6%B7%B1300.pdf?versionId=CAEQLhiBgMCM866XiBgiIDFkMmY5MjMyNGJkYTQ0NWU5ZDk4MzUzMDhhZGY4YTlk',
             online:''
           }
-          },
-         {
+        },
+        {
           type: 'pdf',
           title: '永赢消费主题A(006252)3000点定投版',
           pdf: {
@@ -175,7 +170,7 @@ const pageH = {
     desc:'',
     imgUrl:''
   },
-  param:[blockA,blockB2]
+  param:[blockA,blockB]
 }
 
 export {pageH}

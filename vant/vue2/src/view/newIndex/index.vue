@@ -3,11 +3,7 @@
     <div class="headbg"> 
     </div>
     <van-grid class="buttonbox" :column-num="3" :border="false">
-      <van-grid-item v-for="(item,index) in param.blockA" :key="index" icon="photo-o" text="文字" />
-      <van-grid-item icon="photo-o" text="文字" />
-      <van-grid-item icon="photo-o" text="文字" />
-      <van-grid-item icon="photo-o" text="文字" />
-      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item v-for="(item,index) in param[0].list" :key="index" :icon="item.icon" :text="item.text" />
     </van-grid>    
       <!-- <van-grid :border="false" :column-num="1" class="block">
         <van-swipe :autoplay="3000" indicator-color="white">
@@ -22,8 +18,8 @@
                 </van-swipe-item>
         </van-swipe>
       </van-grid>  -->
-    <div v-for="(item,index) in param" :key="index">
-      <van-grid v-if="item.type=='material'" :border="false" :column-num="1" class="block">
+    <!-- <div v-for="(item,index) in param[1].list" :key="index">
+      <van-grid :border="false" :column-num="1" class="block">
         <van-grid-item>
           <van-tabs v-model="active[index]">
             <van-tab v-for="(childitem,childindex) in item.list" :key="childindex" :title="childitem.title">
@@ -72,13 +68,13 @@
           </van-tabs>
         </van-grid-item>
       </van-grid>
-    </div>
-    <commonlist :param="param.blockB2" />
+    </div> -->
+    <commonlist :param="param" />
   </div>
 </template>
 
 <script>
-import { ImagePreview } from 'vant';
+// import { ImagePreview } from 'vant';
 import commonlist from '../commonList';
 import { pageH } from '../main/newIndex.js'
 export default {
@@ -86,7 +82,9 @@ export default {
     commonlist
   },
   props:{
-        param:pageH.param
+        param: {
+          default : pageH.param
+        }
   },
   data() {
       return {
@@ -97,35 +95,35 @@ export default {
   },
   created() {
     console.log('param')
-    console.log(this.param)
+    console.log(this.param[1])
   },
   methods:{
-    listClik(item) {
-      if(item.type=='img') {
-        ImagePreview([item.img]);
-      } else {
-        window.location.href = item.href
-      }
-    },
-    detailClick(item) {
-          if(item.type=='pdf') {
-            var link = document.createElement('a');
-            const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
-            link.setAttribute("href", downloadUrl);
-            link.setAttribute("download", '测试下载.pdf');
-            var evObj = document.createEvent('MouseEvents');
-            evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-            link.dispatchEvent(evObj);
-          } else if(item.type=='href') {
-            this.$router.push({name: item.url ,query: item.query});
-          }
-    },
-    detailPosterClick(item) {
-        this.$router.push({name: item.url ,query: item.query});
-    },
-    preview(url) {
-      ImagePreview([url]);
-    },
+    // listClik(item) {
+    //   if(item.type=='img') {
+    //     ImagePreview([item.img]);
+    //   } else {
+    //     window.location.href = item.href
+    //   }
+    // },
+    // detailClick(item) {
+    //       if(item.type=='pdf') {
+    //         var link = document.createElement('a');
+    //         const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
+    //         link.setAttribute("href", downloadUrl);
+    //         link.setAttribute("download", '测试下载.pdf');
+    //         var evObj = document.createEvent('MouseEvents');
+    //         evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    //         link.dispatchEvent(evObj);
+    //       } else if(item.type=='href') {
+    //         this.$router.push({name: item.url ,query: item.query});
+    //       }
+    // },
+    // detailPosterClick(item) {
+    //     this.$router.push({name: item.url ,query: item.query});
+    // },
+    // preview(url) {
+    //   ImagePreview([url]);
+    // },
   }
 };
 </script>
