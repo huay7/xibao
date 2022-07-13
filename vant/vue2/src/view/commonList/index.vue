@@ -36,6 +36,13 @@
                     </van-row>
                 </van-cell>
               </van-list>
+              <van-row v-if="childitem.type === 'poster'" class="poster-row">
+                <van-grid  :border="false" :column-num="1" class="block" >
+                  <van-row v-for="(grandchilditem,grandchildindex) in childitem.posterList" :key="grandchildindex">
+                    <img :src="grandchilditem.titlePicture" alt="" class="imgsty" @click="productClick(grandchilditem.url)">
+                  </van-row>    
+                </van-grid>               
+              </van-row>
             </van-tab>
           </van-tabs>
         </van-grid-item>
@@ -77,7 +84,10 @@ export default {
       } else {
         window.location.href = item.href
       } 
-    }
+    },
+    detailPosterClick(item) {
+        this.$router.push({name: item.url ,query: item.query});
+    },
   }
 };
 </script>
@@ -131,5 +141,31 @@ export default {
 .iconstyle{
   display: flex;
   align-items: flex-start;
+}
+.poster-row {
+  margin-top: 16px;
+}
+
+
+
+
+
+.block {
+  margin-left:16px;
+  margin-right:16px;
+  margin-top:16px;
+}
+.ml-small {
+  margin-left:12px;
+  max-width: 85%;
+}
+.poster {
+  margin-top: 6px;
+  font-size: 14px;
+}
+.imgsty{
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 20px;
 }
 </style>

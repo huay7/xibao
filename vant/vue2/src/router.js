@@ -35,6 +35,13 @@ const routes = [
       title: ''
     }
   },
+  {
+    name: 'newIndex',
+    component: () => import('./view/newIndex'),
+    meta: {
+      title: '永赢新版首页'
+    }
+  },
 ];
 
 // add route path
