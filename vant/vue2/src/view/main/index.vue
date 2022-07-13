@@ -21,7 +21,7 @@ import celebrateposter from '../celebratePoster'
 import sidebarVersion from '../test/sidebarVersion.vue'
 import ningyinPlace from "../ningyinPlace"
 import pictureview from '../pictureView'
-import { pageA,pageB,pageC } from './autoIvest.js'
+import { pageA,pageB,pageC,pageO } from './autoIvest.js'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK,pageZ } from './test.js'
@@ -47,7 +47,7 @@ export default {
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG,pageM],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG,pageM,pageO],
         currentTabComponent: {},
         isPwd:false,
         password:'',

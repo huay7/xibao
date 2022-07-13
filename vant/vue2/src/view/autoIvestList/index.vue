@@ -11,8 +11,8 @@
                           src="https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052601/banner2.jpg?versionId=CAEQLhiBgIDgqrX.hxgiIDJmNTVlMDRjZDcxODQ3NDRiM2RjNzMwZDg3ODUxYmUw"
                       />
                 </van-swipe-item>
-        </van-swipe>
-      </van-grid> 
+          </van-swipe>
+        </van-grid> 
     <div v-for="(item,index) in param" :key="index">
       <van-grid v-if="item.type=='material'" :border="false" :column-num="1" class="block">
         <van-grid-item>
@@ -63,8 +63,22 @@
           </van-tabs>
         </van-grid-item>
       </van-grid>
+      <commonlist v-if="item.type=='list'" :param="param" />
+      <van-grid v-if="item.type=='pictureList'" :border="false" :column-num="1" class="block">
+          <van-grid-item>
+            <van-image
+              v-for="(itemChild,indexChild) in item.list"
+              :key="indexChild"
+              class="mt-8px"
+              width="100%"
+              height="100"
+              @click="detailClick(itemChild)"
+              :src="itemChild.titlePicture"
+            />       
+          </van-grid-item>
+      </van-grid> 
     </div>
-    <commonlist :param="param" />
+
   </div>
 </template>
 
@@ -121,7 +135,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.mt-8px {
+  margin-top: 8px;
+}
 .my-swipe .van-swipe-item {
   color: #fff;
   font-size: 20px;
