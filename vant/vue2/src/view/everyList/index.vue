@@ -1,30 +1,18 @@
 <template>
   <div>
-    <div class="headbg"> 
-    </div>
-    <van-grid class="buttonbox" :column-num="3" :border="false" icon-size="42">
-      <van-grid-item v-for="(item,index) in param[0].list" 
-      :key="index" 
-      :icon="item.icon" 
-      :text="item.text"
-      @click="detailClick(item)"
-     />
-    </van-grid>    
-    <commonlist :param="param" />
+    <productlist :param="param" />
   </div>
 </template>
 
 <script>
-import commonlist from '../commonList';
-import { pageH } from '../main/newIndex.js'
+import { ImagePreview } from 'vant';
+import productlist from '../productList'
 export default {
   components:{
-    commonlist
+    productlist
   },
   props:{
-        param: {
-          default : pageH.param
-        }
+        param:[]
   },
   data() {
       return {
@@ -34,12 +22,18 @@ export default {
       }
   },
   created() {
-    console.log('param')
-    console.log(this.param[1])
+    console.log('!!!param')
+    console.log(this.param)
   },
   methods:{
+    listClik(item) {
+      if(item.type=='img') {
+        ImagePreview([item.img]);
+      } else {
+        window.location.href = item.href
+      }
+    },
     detailClick(item) {
-          console.log(item)
           if(item.type=='pdf') {
             var link = document.createElement('a');
             const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
@@ -51,6 +45,12 @@ export default {
           } else if(item.type=='href') {
             this.$router.push({name: item.url ,query: item.query});
           }
+    },
+    detailPosterClick(item) {
+        this.$router.push({name: item.url ,query: item.query});
+    },
+    preview(url) {
+      ImagePreview([url]);
     },
   }
 };
@@ -93,25 +93,5 @@ export default {
 }
 .poster-row {
   margin-top: 16px;
-}
-.headbg{
-  background: url('https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5');
-  width: 100%;
-  background-size: 100%;
-  height: 11rem;
-}
-.buttonbox{
-  margin: -50px 15px 15px 15px;
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 10px 0;
-  justify-content: center;
-}
-/deep/ .van-grid-item__content {
-  padding: 8px !important;
-}
-/deep/ .van-grid-item__text{
-  font-size: 13px !important;
 }
 </style>
