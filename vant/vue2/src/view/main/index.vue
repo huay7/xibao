@@ -31,6 +31,8 @@ import { pageK,pageZ } from './test.js'
 import { pageY,pageT, pageP } from './guzhaiPoint.js'
 import { pageG } from './ningyinPlace.js'
 import { pageM } from './pictureView.js'
+import { pageH } from './newIndex.js'
+import { pageI } from './everyList'
 import { Notify } from 'vant';
 
 import { queryParams } from '@/utils/api'
