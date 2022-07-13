@@ -7,35 +7,35 @@ const blockA = {
       icon:require('../../static/newIndex/WechatIMG247.png'),
       type: 'href',
       url:'main',
-      query:{id:'046'}
+      query:{id:'046',key:1}
     },
     {
       text: '市场',   
       icon:require('../../static/newIndex/WechatIMG248.png'),
       type: 'href',
       url:'main',
-      query:{id:'046'}
+      query:{id:'046',key:2}
     },
     {
       text: '定投',   
       icon:require('../../static/newIndex/WechatIMG249.png'),
       type: 'href',
       url:'main',
-      query:{id:'046'}
+      query:{id:'046',key:3}
     },
     {
       text: '公司',   
       icon:require('../../static/newIndex/WechatIMG249.png'),
       type: 'href',
       url:'main',
-      query:{id:'046'}
+      query:{id:'046',key:4}
     },
     {
       text: '陪伴',
       icon:require('../../static/newIndex/WechatIMG247.png'),
       type: 'href',
       url:'main',
-      query:{id:'046'}
+      query:{id:'046',key:5}
     },
   ]
 }

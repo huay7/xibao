@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div v-for="(item,index) in param" :key="index">
-      <van-grid v-if="item.type=='prolist'" :border="false" :column-num="1" class="block">
+    <div>
+      <van-grid :border="false" :column-num="1" class="block">
         <van-grid-item>
-          <van-tabs v-model="active[index]">
-            <van-tab v-for="(childitem,childindex) in item.productlist" :key="childindex" :title="childitem.title">
+          <van-tabs v-model="active[key-1]">
+            <van-tab v-for="(childitem,childindex) in param[key-1].productlist" :key="childindex" :title="childitem.title">
               <van-list>
                 <van-cell center v-for="(grandchilditem,grandchildindex) in childitem.list" :key="grandchildindex" @click="listClik(grandchilditem)">
                   <template #icon>
@@ -38,10 +38,12 @@ export default {
         activeNames: ['1'],
         list: ['大跌后，如何加速回本解套？','赎回定投的基金份额，是不是代表定投终止？'],
         loading: false,
+        key: 1
       }
   },
   created() {
-    console.log('!!param')
+    this.key = this.$route.query.key
+    console.log('!~~~!param',this.$route.query)
     console.log(this.param)
   },
   methods:{
