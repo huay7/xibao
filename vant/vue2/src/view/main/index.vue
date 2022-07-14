@@ -35,7 +35,7 @@ import { pageH } from './newIndex.js'
 import { pageI } from './everyList'
 import { Notify } from 'vant';
 
-// import { queryParams } from '@/utils/api'
+import { queryParams } from '@/utils/api'
 export default {
     components: {
         posterlist,
@@ -65,11 +65,11 @@ export default {
     async created() {
         this.id = this.$route.query.id;
 
-        this.getCurrentTemp(this.id)
+        // this.getCurrentTemp(this.id)
 
-        // const res = await queryParams()
-        // const { data } = res;
-        // this.getCurrent(this.id,data)
+        const res = await queryParams()
+        const { data } = res;
+        this.getCurrent(this.id,data)
         this.setTitle(this.currentTabComponent.title)
         if(this.currentTabComponent.isPwd) {
             console.log(window.localStorage.getItem(this.id))

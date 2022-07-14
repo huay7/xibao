@@ -39,7 +39,7 @@
               <van-row v-if="childitem.type === 'poster'" class="poster-row">
                 <van-grid  :border="false" :column-num="1" class="block" >
                   <van-row v-for="(grandchilditem,grandchildindex) in childitem.posterList" :key="grandchildindex">
-                    <img :src="grandchilditem.titlePicture" alt="" class="imgsty" @click="productClick(grandchilditem.url)">
+                    <img :src="grandchilditem.titlePicture" alt="" class="imgsty" @click="listClik(grandchilditem.url)">
                   </van-row>    
                 </van-grid>               
               </van-row>
