@@ -296,6 +296,19 @@ const blockB = {
     }
   ]
 }
+
+const blockC = {
+  type: 'pictureList',
+  list: [
+    {
+      type: 'href',
+      titlePicture:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-11/bottom2.jpg?versionId=CAEQMhiBgICpzOSvjxgiIDFhMTI3ZDM5NDZhMDQ0ZDU4Y2EzNTIwZTgyNTY5N2Ez',
+      url:'main',
+      query:{id:'014'}
+    }
+  ]
+}
+
 const pageA = {
   id:"002",
   title:'定投资料包',
@@ -306,9 +319,10 @@ const pageA = {
     imgUrl:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052702/%E5%88%86%E4%BA%AB%E5%9B%BE.jpg?versionId=CAEQLhiBgICYy7SViBgiIGQ5ZjY3MDFlMTA3YTRjMzJhZTRlZDZhZGU1MmJmZDdl'
   },
   param:[
-    blockA,blockB
+    blockA,blockC,blockB,blockC
   ]
 }
+
 
 
 const blockB2 = {
@@ -406,4 +420,23 @@ const pageC = {
   param:[blockB2]
 }
 
-export {pageB,pageA,pageC}
+
+const pageO = {
+  id:"014",
+  title:'定投视频',
+  model:'videolist',
+  share:{
+    title:'',
+    desc:'',
+    imgUrl:''
+  },
+  param:[
+  {
+    title:"定投视频",
+    url:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-11/normal%20video.mp4?versionId=CAEQMhiBgICJjqOzjxgiIDY1ZmQzZjFjNWRiMDQ2ZTZhYzgwZDNmMTgzZDA1YjYz',
+    poster:''
+  }
+]
+}
+
+export {pageB,pageA,pageC,pageO}

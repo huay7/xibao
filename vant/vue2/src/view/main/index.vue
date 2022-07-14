@@ -21,10 +21,14 @@ import celebrateposter from '../celebratePoster'
 import sidebarVersion from '../test/sidebarVersion.vue'
 import ningyinPlace from "../ningyinPlace"
 import pictureview from '../pictureView'
+<<<<<<< HEAD
+import { pageA,pageB,pageC,pageO } from './autoIvest.js'
+=======
 import newIndex from '../newIndex'
 import everyList from '../everyList'
 import productList from '../productList'
 import { pageA,pageB,pageC } from './autoIvest.js'
+>>>>>>> origin/feature-20220711-indexRequire
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK,pageZ } from './test.js'
@@ -55,7 +59,7 @@ export default {
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG,pageM,pageH,pageI],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG,pageM,pageO,pageH,pageI],
         currentTabComponent: {},
         isPwd:false,
         password:'',
