@@ -21,14 +21,10 @@ import celebrateposter from '../celebratePoster'
 import sidebarVersion from '../test/sidebarVersion.vue'
 import ningyinPlace from "../ningyinPlace"
 import pictureview from '../pictureView'
-<<<<<<< HEAD
 import { pageA,pageB,pageC,pageO } from './autoIvest.js'
-=======
 import newIndex from '../newIndex'
 import everyList from '../everyList'
 import productList from '../productList'
-import { pageA,pageB,pageC } from './autoIvest.js'
->>>>>>> origin/feature-20220711-indexRequire
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK,pageZ } from './test.js'
