@@ -104,25 +104,20 @@ export default {
     console.log(this.param)
   },
   methods:{
-    listClik(item) {
+    detailClick(item) {
       if(item.type=='img') {
         ImagePreview([item.img]);
-      } else {
-        window.location.href = item.href
+      }else if(item.type=='pdf') {
+        var link = document.createElement('a');
+        const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
+        link.setAttribute("href", downloadUrl);
+        link.setAttribute("download", '测试下载.pdf');
+        var evObj = document.createEvent('MouseEvents');
+        evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        link.dispatchEvent(evObj);
+      } else if(item.type=='href') {
+        this.$router.push({name: item.url ,query: item.query});
       }
-    },
-    detailClick(item) {
-          if(item.type=='pdf') {
-            var link = document.createElement('a');
-            const downloadUrl = this.getPDFDownLoadUrl(item.pdf)
-            link.setAttribute("href", downloadUrl);
-            link.setAttribute("download", '测试下载.pdf');
-            var evObj = document.createEvent('MouseEvents');
-            evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-            link.dispatchEvent(evObj);
-          } else if(item.type=='href') {
-            this.$router.push({name: item.url ,query: item.query});
-          }
     },
     detailPosterClick(item) {
         this.$router.push({name: item.url ,query: item.query});
