@@ -4,38 +4,42 @@ const blockA = {
   list:[
     {
       text: '产品',  
-      icon:require('../../static/newIndex/WechatIMG247.png'),
+      icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG248.png?versionId=CAEQNhiBgICn78brkBgiIGRlZWIwOGUwMTY2MjQ0ZTNhNTk4ZWY1OGVhYjFiNjIy',
       type: 'href',
       url:'main',
       query:{id:'029',key:1}
     },
     {
       text: '市场',   
-      icon:require('../../static/newIndex/WechatIMG248.png'),
+      icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG249.png?versionId=CAEQNhiBgICV78brkBgiIGU0MDM3NDEzNjliMTQzMTU4Nzg2NDMzNzBkNjdiOTE1',
       type: 'href',
-      url:'main',
-      query:{id:'029',key:2}
+      // url:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=017',
+      // query:{id:'029',key:2}
+      url: 'main',
+      query:{id:'017'}
     },
     {
       text: '定投',   
-      icon:require('../../static/newIndex/WechatIMG249.png'),
+      icon:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG247.png?versionId=CAEQNhiBgIDD8cbrkBgiIDM2ZDhhNzM3NGZkYjQxMjVhNmFhZjkxMmE4ZGUxZTMz',
       type: 'href',
-      url:'main',
-      query:{id:'029',key:3}
+      // url:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=002',
+      url: 'main',
+      query:{id:'002'}
     },
     {
       text: '公司',   
-      icon:require('../../static/newIndex/WechatIMG249.png'),
+      icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG249.png?versionId=CAEQNhiBgICV78brkBgiIGU0MDM3NDEzNjliMTQzMTU4Nzg2NDMzNzBkNjdiOTE1',
       type: 'href',
-      url:'main',
-      query:{id:'029',key:4}
+      // url:'https://owa.maxwealthfund.com/innersite/?product=30',
+      url: 'main',
+      query:{id:'30'}
     },
     {
       text: '陪伴',
-      icon:require('../../static/newIndex/WechatIMG247.png'),
+      icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG248.png?versionId=CAEQNhiBgICn78brkBgiIGRlZWIwOGUwMTY2MjQ0ZTNhNTk4ZWY1OGVhYjFiNjIy',
       type: 'href',
       url:'main',
-      query:{id:'029',key:5}
+      query:{id:'029',key:2}
     },
   ]
 }
@@ -43,6 +47,21 @@ const blockA = {
 const blockB = {
   type: 'list',
   list: [
+    {
+      title:'近期热搜',
+      type: 'poster',
+      isWithPoster:true,
+      posterList:[
+        {
+          title:'自己运营',
+          titlePicture: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-18/lQDPJxaByMqj1ArMuM0CrrAr5bl7RBmWrALVtHjiANIA_686_184.jpg?versionId=CAEQNhiBgIC6t.PCkBgiIDAwYmI4NzdhOTc4ZTQyZWFiNzZlNzQ4OTIxMjBhOGI3',
+          url:{
+            type: 'href',
+            href:'https://mp.weixin.qq.com/s/RSR_FKYCbWUoMApFrZE81A',
+          },
+        },
+      ]
+    },
     {
       title: '最新材料',
       list:[
@@ -75,38 +94,7 @@ const blockB = {
           img:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022052003/%E5%AE%9A%E6%8A%95%E6%8E%A8%E8%8D%90-%E6%B0%B8%E8%B5%A2%E5%8D%8E%E5%98%89%E4%BF%A1%E7%94%A8%E5%80%BAA%EF%BC%88%E5%B7%B2%E5%AE%A1%E6%A0%B8%EF%BC%89.jpg'
         },
       ]
-    },
-    {
-        title:'近期热搜',
-        type: 'poster',
-        isWithPoster:true,
-        posterList:[
-          {
-            title:'自己运营',
-            titlePicture: require('../ningyinPlace/image/baner1.png'),
-            url:{
-              type: 'href',
-              href:'https://mp.weixin.qq.com/s/RSR_FKYCbWUoMApFrZE81A',
-            },
-          },
-          {
-            title:'自己运营',
-            titlePicture: require('../ningyinPlace/image/banner2.png'),
-            url:{
-              type: 'href',
-              href:'https://mp.weixin.qq.com/s/RSR_FKYCbWUoMApFrZE81A',
-            },
-          },
-          {
-            title:'自己运营',
-            titlePicture: require('../ningyinPlace/image/banner3.png'),
-            url:{
-              type: 'href',
-              href:'https://mp.weixin.qq.com/s/RSR_FKYCbWUoMApFrZE81A',
-            },
-          }
-        ]
-      }
+    }
   ]
 }
 const pageH = {
@@ -121,4 +109,4 @@ const pageH = {
   param:[blockA,blockB]
 }
 
-export {pageH}
+export { pageH };
