@@ -8,13 +8,13 @@
               <van-list>
                 <van-cell center v-for="(grandchilditem,grandchildindex) in childitem.list" :key="grandchildindex" @click="listClik(grandchilditem)">
                   <template #icon>
-                    <img class="imgsty" src="../../static/newMain.jpg" alt=""/>
+                    <img class="imgsty" :src="grandchilditem.sharePic" alt=""/>
                   </template>
                   <template  #title>
-                    <div>{{grandchilditem.title}}</div>
+                    <div>{{grandchilditem.name}}</div>
                   </template>
                   <template #label>
-                    <div>{{grandchilditem.desc}}</div>
+                    <div>{{grandchilditem.slogan}}</div>
                   </template>
                 </van-cell>
               </van-list>
@@ -59,7 +59,7 @@ export default {
         evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
         link.dispatchEvent(evObj);
       } else {
-        window.location.href = item.href
+        window.location.href = item.url
       } 
     },
     detailPosterClick(item) {
