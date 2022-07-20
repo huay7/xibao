@@ -37,7 +37,7 @@
                 </van-cell>
               </van-list>
               <van-row v-if="childitem.type === 'poster'" class="poster-row">
-                <van-grid  :border="false" :column-num="1" class="block" >
+                <van-grid  :border="false" :column-num="1" >
                   <van-row v-for="(grandchilditem,grandchildindex) in childitem.posterList" :key="grandchildindex">
                     <img :src="grandchilditem.titlePicture" alt="" class="imgsty" @click="listClik(grandchilditem.url)">
                   </van-row>    
@@ -166,6 +166,6 @@ export default {
 .imgsty{
   width: 100%;
   border-radius: 0.5rem;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 </style>

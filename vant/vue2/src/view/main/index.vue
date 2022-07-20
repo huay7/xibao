@@ -21,10 +21,10 @@ import celebrateposter from '../celebratePoster'
 import sidebarVersion from '../test/sidebarVersion.vue'
 import ningyinPlace from "../ningyinPlace"
 import pictureview from '../pictureView'
+import { pageA,pageB,pageC,pageO } from './autoIvest.js'
 import newIndex from '../newIndex'
 import everyList from '../everyList'
 import productList from '../productList'
-import { pageA,pageB,pageC,pageO } from './autoIvest.js'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
 import { pageK,pageZ } from './test.js'
@@ -35,7 +35,7 @@ import { pageH } from './newIndex.js'
 import { pageI } from './everyList'
 import { Notify } from 'vant';
 
-import { queryParams } from '@/utils/api'
+// import { queryParams } from '@/utils/api'
 export default {
     components: {
         posterlist,
@@ -65,11 +65,11 @@ export default {
     async created() {
         this.id = this.$route.query.id;
 
-        // this.getCurrentTemp(this.id)
+        this.getCurrentTemp(this.id)
 
-        const res = await queryParams()
-        const { data } = res;
-        this.getCurrent(this.id,data)
+        // const res = await queryParams()
+        // const { data } = res;
+        // this.getCurrent(this.id,data)
         this.setTitle(this.currentTabComponent.title)
         if(this.currentTabComponent.isPwd) {
             console.log(window.localStorage.getItem(this.id))

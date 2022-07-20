@@ -2,7 +2,7 @@
   <div>
     <div class="headbg"> 
     </div>
-    <van-grid class="buttonbox" :column-num="3" :border="false" icon-size="42">
+    <van-grid class="buttonbox" :column-num="5" :border="false" icon-size="42">
       <van-grid-item v-for="(item,index) in param[0].list" 
       :key="index" 
       :icon="item.icon" 
@@ -69,7 +69,7 @@ export default {
 .block {
   margin-left:16px;
   margin-right:16px;
-  margin-top:16px;
+  // margin-top:16px;
 }
 .van-tabs {
   width:100%
@@ -92,9 +92,10 @@ export default {
   font-size: 14px;
 }
 .poster-row {
-  margin-top: 16px;
+  // margin-top: 16px;
 }
 .headbg{
+  // background: url('../../static/newIndex/WechatIMG1323.jpeg');
   background: url('https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5');
   width: 100%;
   background-size: 100%;
