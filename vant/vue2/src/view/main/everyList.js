@@ -260,7 +260,7 @@ const blockE = {
 //     }
 //   ],  
 // }
-const pageI = {
+const pageL = {
   id:"029",
   title:'资料合集',
   model:'productList',
@@ -271,4 +271,4 @@ const pageI = {
   },
   param:[blockA,blockE]
 }
-module.exports = [ pageI ];
+export {pageL};

@@ -32,7 +32,7 @@ import { pageY,pageT, pageP } from './guzhaiPoint.js'
 import { pageG } from './ningyinPlace.js'
 import { pageM } from './pictureView.js'
 import { pageH } from './newIndex.js'
-import { pageI } from './everyList'
+import { pageL } from './everyList.js'
 import { Notify } from 'vant';
 
 // import { queryParams } from '@/utils/api'
@@ -55,7 +55,7 @@ export default {
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG,pageM,pageO,pageH,pageI],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG,pageM,pageO,pageH,pageL],
         currentTabComponent: {},
         isPwd:false,
         password:'',

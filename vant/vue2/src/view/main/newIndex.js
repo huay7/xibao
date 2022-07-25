@@ -6,40 +6,31 @@ const blockA = {
       text: '产品',  
       icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG248.png?versionId=CAEQNhiBgICn78brkBgiIGRlZWIwOGUwMTY2MjQ0ZTNhNTk4ZWY1OGVhYjFiNjIy',
       type: 'href',
-      url:'main',
-      query:{id:'029',key:1}
+      href:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=029&key=1',
     },
     {
       text: '市场',   
       icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG249.png?versionId=CAEQNhiBgICV78brkBgiIGU0MDM3NDEzNjliMTQzMTU4Nzg2NDMzNzBkNjdiOTE1',
       type: 'href',
-      // url:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=017',
-      // query:{id:'029',key:2}
-      url: 'main',
-      query:{id:'017'}
+      href:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=017',
     },
     {
       text: '定投',   
       icon:'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG247.png?versionId=CAEQNhiBgIDD8cbrkBgiIDM2ZDhhNzM3NGZkYjQxMjVhNmFhZjkxMmE4ZGUxZTMz',
       type: 'href',
-      // url:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=002',
-      url: 'main',
-      query:{id:'002'}
+      href:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=002',
     },
     {
       text: '公司',   
       icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG249.png?versionId=CAEQNhiBgICV78brkBgiIGU0MDM3NDEzNjliMTQzMTU4Nzg2NDMzNzBkNjdiOTE1',
       type: 'href',
-      // url:'https://owa.maxwealthfund.com/innersite/?product=30',
-      url: 'main',
-      query:{id:'30'}
+      href: 'https://owa.maxwealthfund.com/innersite/?product=30',
     },
     {
       text: '陪伴',
       icon: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-20/WechatIMG248.png?versionId=CAEQNhiBgICn78brkBgiIGRlZWIwOGUwMTY2MjQ0ZTNhNTk4ZWY1OGVhYjFiNjIy',
       type: 'href',
-      url:'main',
-      query:{id:'029',key:2}
+      href:'https://owa.maxwealthfund.com/innersite/poster/#/main?id=029&key=2',
     },
   ]
 }
