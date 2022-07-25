@@ -150,11 +150,11 @@ export default {
 
 
 
-.block {
-  margin-left:5px;
-  margin-right:5px;
-  margin-top:10px;
-}
+// .block {
+//   margin-left:5px;
+//   margin-right:5px;
+//   margin-top:10px;
+// }
 .ml-small {
   margin-left:12px;
   max-width: 85%;
