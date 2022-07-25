@@ -143,7 +143,7 @@ export default {
   align-items: flex-start;
 }
 .poster-row {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 
@@ -151,9 +151,9 @@ export default {
 
 
 .block {
-  margin-left:16px;
-  margin-right:16px;
-  margin-top:16px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-top:10px;
 }
 .ml-small {
   margin-left:12px;

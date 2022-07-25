@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div class="headbg"> 
-    </div>
+    <div class="headbg"> </div>
     <van-grid class="buttonbox" :column-num="5" :border="false" icon-size="42">
       <van-grid-item v-for="(item,index) in param[0].list" 
       :key="index" 
@@ -49,7 +48,7 @@ export default {
             evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
             link.dispatchEvent(evObj);
           } else if(item.type=='href') {
-            this.$router.push({name: item.url ,query: item.query});
+             window.location.href = item.href
           }
     },
   }
@@ -69,7 +68,7 @@ export default {
 .block {
   margin-left:16px;
   margin-right:16px;
-  // margin-top:16px;
+  margin-top:5px;
 }
 .van-tabs {
   width:100%
@@ -95,18 +94,16 @@ export default {
   // margin-top: 16px;
 }
 .headbg{
-  // background: url('../../static/newIndex/WechatIMG1323.jpeg');
-  background: url('https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5');
+  background: url('../../static/newIndex/bannerbg.jpg');
+  // background: url('https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5');
   width: 100%;
   background-size: 100%;
-  height: 11rem;
+  height: 14.2rem;
 }
 .buttonbox{
-  margin: -50px 15px 15px 15px;
-  background-color: #fff;
-  border-radius: 10px;
+  margin: -94px 15px 0px 15px;
   overflow: hidden;
-  padding: 10px 0;
+  // padding: 10px 0;
   justify-content: center;
 }
 /deep/ .van-grid-item__content {
@@ -114,5 +111,8 @@ export default {
 }
 /deep/ .van-grid-item__text{
   font-size: 13px !important;
+}
+/deep/ .van-grid-item__content {
+  background-color: transparent;
 }
 </style>
