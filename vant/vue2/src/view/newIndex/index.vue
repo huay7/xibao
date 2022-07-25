@@ -94,14 +94,16 @@ export default {
   // margin-top: 16px;
 }
 .headbg{
-  background: url('../../static/newIndex/bannerbg.jpg');
-  // background: url('https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5');
+  // background: url('../../static/newIndex/bannerbg.jpg');
+  background: url('https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5');
   width: 100%;
   background-size: 100%;
-  height: 14.2rem;
+  height: 11rem;
 }
 .buttonbox{
-  margin: -94px 15px 0px 15px;
+  margin: -50px 15px 15px 15px;
+  background-color: #fff;
+  border-radius: 10px;
   overflow: hidden;
   // padding: 10px 0;
   justify-content: center;
@@ -111,8 +113,5 @@ export default {
 }
 /deep/ .van-grid-item__text{
   font-size: 13px !important;
-}
-/deep/ .van-grid-item__content {
-  background-color: transparent;
 }
 </style>
