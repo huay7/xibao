@@ -1,6 +1,9 @@
-//海报列表配置
+const blockC = {
+  type: 'banner',
+  bgImg: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5'
+}
 const blockA = {
-  type: 'pic',
+  type: 'tab',
   list:[
     {
       text: '产品',  
@@ -93,6 +96,7 @@ const blockB = {
     }
   ]
 }
+
 const pageH = {
   id:"028",
   title:'新版首页',
@@ -102,7 +106,7 @@ const pageH = {
     desc:'',
     imgUrl:''
   },
-  param:[blockA,blockB]
+  param:[blockC,blockA,blockB]
 }
 
 export { pageH };

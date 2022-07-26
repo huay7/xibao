@@ -1,15 +1,17 @@
 <template>
   <div>
-    <div class="headbg"> </div>
-    <van-grid class="buttonbox" :column-num="5" :border="false" icon-size="42">
-      <van-grid-item v-for="(item,index) in param[0].list" 
-      :key="index" 
-      :icon="item.icon" 
-      :text="item.text"
-      @click="detailClick(item)"
-     />
-    </van-grid>    
-    <commonlist :param="param" />
+    <div v-for="(child,index) in param" :key="index">
+      <div class="headbg" v-if="child.type === 'banner'"><img :src="child.bgImg" alt=""> </div>
+      <van-grid v-if="child.type === 'tab'" class="buttonbox" :column-num="child.list.length" :border="false" icon-size="42">
+        <van-grid-item v-for="(grandchilditem,grandchildindex) in child.list" 
+        :key="grandchildindex" 
+        :icon="grandchilditem.icon" 
+        :text="grandchilditem.text"
+        @click="detailClick(grandchilditem)"
+      />
+      </van-grid>    
+      <commonlist v-if="child.type === 'list'" :param="param" />      
+    </div>
   </div>
 </template>
 
@@ -34,7 +36,7 @@ export default {
   },
   created() {
     console.log('param')
-    console.log(this.param[1])
+    console.log(this.param)
   },
   methods:{
     detailClick(item) {
@@ -96,11 +98,11 @@ export default {
   // margin-top: 16px;
 }
 .headbg{
-  // background: url('../../static/newIndex/bannerbg.jpg');
-  background: url('https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5');
   width: 100%;
   background-size: 100%;
-  height: 11rem;
+  img{
+    width: 100%;
+  }
 }
 .buttonbox{
   margin: -50px 15px 15px 15px;
