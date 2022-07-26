@@ -1,41 +1,39 @@
 <template>
   <div>
-    <div>
-      <van-grid :border="false" :column-num="1" class="block">
-        <van-grid-item  v-if="key === 2">
-          <van-cell center v-for="(grandchilditem,grandchildindex) in param[key-1].list" :key="grandchildindex" @click="listClik(grandchilditem)">
-            <template #icon>
-              <img class="imgsty" :src="grandchilditem.sharePic" alt=""/>
-            </template>
-            <template  #title>
-              <div>{{grandchilditem.name}}</div>
-            </template>
-            <template #label>
-              <div>{{grandchilditem.slogan}}</div>
-            </template>
-          </van-cell>          
-        </van-grid-item>
-        <van-grid-item v-if="key === 1">
-          <van-tabs v-model="active[key-1]">
-            <van-tab v-for="(childitem,childindex) in param[key-1].productlist" :key="childindex" :title="childitem.title">
-              <van-list>
-                <van-cell center v-for="(grandchilditem,grandchildindex) in childitem.list" :key="grandchildindex" @click="listClik(grandchilditem)">
-                  <template #icon>
-                    <img class="imgsty" :src="grandchilditem.sharePic" alt=""/>
-                  </template>
-                  <template  #title>
-                    <div>{{grandchilditem.name}}</div>
-                  </template>
-                  <template #label>
-                    <div>{{grandchilditem.slogan}}</div>
-                  </template>
-                </van-cell>
-              </van-list>
-            </van-tab>
-          </van-tabs>
-        </van-grid-item>
-      </van-grid>
-    </div>
+    <van-grid v-for="(childItem,index) in param" :key="index" :border="false" :column-num="1" class="block">
+      <van-grid-item v-if="childItem.withTab === false">
+        <van-cell center v-for="(grandchilditem,grandchildindex) in childItem.list" :key="grandchildindex" @click="listClik(grandchilditem)">
+          <template #icon>
+            <img class="imgsty" :src="grandchilditem.sharePic" alt=""/>
+          </template>
+          <template  #title>
+            <div>{{grandchilditem.name}}</div>
+          </template>
+          <template #label>
+            <div>{{grandchilditem.slogan}}</div>
+          </template>
+        </van-cell>          
+      </van-grid-item>
+      <van-grid-item v-if="childItem.withTab === true">
+        <van-tabs v-model="active[key-1]">
+          <van-tab v-for="(childitem,childindex) in childItem.list" :key="childindex" :title="childitem.title">
+            <van-list>
+              <van-cell center v-for="(grandchilditem,grandchildindex) in childitem.list" :key="grandchildindex" @click="listClik(grandchilditem)">
+                <template #icon>
+                  <img class="imgsty" :src="grandchilditem.sharePic" alt=""/>
+                </template>
+                <template  #title>
+                  <div>{{grandchilditem.name}}</div>
+                </template>
+                <template #label>
+                  <div>{{grandchilditem.slogan}}</div>
+                </template>
+              </van-cell>
+            </van-list>
+          </van-tab>
+        </van-tabs>
+      </van-grid-item>
+    </van-grid>
   </div>
 </template>
 
@@ -55,7 +53,6 @@ export default {
       }
   },
   created() {
-    this.key = this.$route.query.key
     console.log('!~~~!param',this.$route.query)
     console.log(this.param)
   },
@@ -71,13 +68,12 @@ export default {
         var evObj = document.createEvent('MouseEvents');
         evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
         link.dispatchEvent(evObj);
+      } else if(item.type=='href'){
+        window.location.href = item.href
       } else {
-        window.location.href = item.url
-      } 
-    },
-    detailPosterClick(item) {
         this.$router.push({name: item.url ,query: item.query});
-    },
+      }
+    }
   }
 };
 </script>

@@ -23,7 +23,6 @@ import ningyinPlace from "../ningyinPlace"
 import pictureview from '../pictureView'
 import { pageA,pageB,pageC,pageO } from './autoIvest.js'
 import newIndex from '../newIndex'
-import everyList from '../everyList'
 import productList from '../productList'
 import { pageD } from './pdfList.js'
 import { pageE } from './celebratePoster.js'
@@ -32,7 +31,7 @@ import { pageY,pageT, pageP } from './guzhaiPoint.js'
 import { pageG } from './ningyinPlace.js'
 import { pageM } from './pictureView.js'
 import { pageH } from './newIndex.js'
-import { pageL } from './everyList.js'
+import { pageL,pageQ } from './productList.js'
 import { Notify } from 'vant';
 
 // import { queryParams } from '@/utils/api'
@@ -50,12 +49,11 @@ export default {
         sidebarVersion,
         ningyinPlace,
         newIndex,
-        everyList,
         productList
    },
    data () {
       return {
-        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageK,pageZ,pageY,pageT,pageP,pageG,pageM,pageO,pageH,pageL],
+        currentTabComponents:[pageA,pageB,pageC,pageD,pageE,pageH,pageG,pageK,pageL,pageM,pageO,pageP,pageQ,pageZ,pageY,pageT],
         currentTabComponent: {},
         isPwd:false,
         password:'',
