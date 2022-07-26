@@ -48,8 +48,9 @@ export default {
             evObj.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
             link.dispatchEvent(evObj);
           } else if(item.type=='href') {
-            //  window.location.href = item.href
-             this.$router.push({name: item.url ,query: item.query});
+             window.location.href = item.href            
+          } else {
+            this.$router.push({name: item.url ,query: item.query});
           }
     },
   }
