@@ -2,19 +2,20 @@
   <div>
     <div>
       <van-grid :border="false" :column-num="1" class="block">
-        <van-cell center v-for="(grandchilditem,grandchildindex) in param[key-1].list" :key="grandchildindex" @click="listClik(grandchilditem)">
-          <template #icon>
-            <img class="imgsty" :src="grandchilditem.sharePic" alt=""/>
-          </template>
-          <template  #title>
-            <div>{{grandchilditem.name}}</div>
-          </template>
-          <template #label>
-            <div>{{grandchilditem.slogan}}</div>
-          </template>
-        </van-cell>
-
-        <!-- <van-grid-item>
+        <van-grid-item  v-if="key === 2">
+          <van-cell center v-for="(grandchilditem,grandchildindex) in param[key-1].list" :key="grandchildindex" @click="listClik(grandchilditem)">
+            <template #icon>
+              <img class="imgsty" :src="grandchilditem.sharePic" alt=""/>
+            </template>
+            <template  #title>
+              <div>{{grandchilditem.name}}</div>
+            </template>
+            <template #label>
+              <div>{{grandchilditem.slogan}}</div>
+            </template>
+          </van-cell>          
+        </van-grid-item>
+        <van-grid-item v-if="key === 1">
           <van-tabs v-model="active[key-1]">
             <van-tab v-for="(childitem,childindex) in param[key-1].productlist" :key="childindex" :title="childitem.title">
               <van-list>
@@ -32,7 +33,7 @@
               </van-list>
             </van-tab>
           </van-tabs>
-        </van-grid-item> -->
+        </van-grid-item>
       </van-grid>
     </div>
   </div>
