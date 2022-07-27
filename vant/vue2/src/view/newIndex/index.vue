@@ -1,8 +1,11 @@
 <template>
   <div>
     <div v-for="(child,index) in param" :key="index">
-      <div class="headbg" v-if="child.type === 'banner'"><img :src="child.bgImg" alt=""> </div>
-      <van-grid v-if="child.type === 'tab'" class="buttonbox" :column-num="child.list.length" :border="false" icon-size="42">
+      <div class="headbg" v-if="child.type === 'banner'">
+        <img :src="child.bgImg" alt="">
+        <!-- <img class="iconsty" src="../../static/newIndex/icon.png" alt="" /> -->
+       </div>
+      <van-grid v-if="child.type === 'tab'" class="buttonbox" :column-num="child.list.length" :border="false" icon-size="50">
         <van-grid-item v-for="(grandchilditem,grandchildindex) in child.list" 
         :key="grandchildindex" 
         :icon="grandchilditem.icon" 
@@ -99,13 +102,14 @@ export default {
 }
 .headbg{
   width: 100%;
+  position: relative;
   background-size: 100%;
   img{
     width: 100%;
   }
 }
 .buttonbox{
-  margin: -50px 15px 15px 15px;
+  margin: -90px 15px 15px 15px;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -113,9 +117,17 @@ export default {
   justify-content: center;
 }
 /deep/ .van-grid-item__content {
-  padding: 8px !important;
+  padding: 2px !important;
 }
 /deep/ .van-grid-item__text{
-  font-size: 13px !important;
+  font-size: 14px !important;
+  margin-top: 2px !important;
+}
+.iconsty{
+  width: 11rem !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 </style>

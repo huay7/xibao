@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-grid v-for="(childItem,index) in param" :key="index" :border="false" :column-num="1" class="block">
+    <van-grid v-for="(childItem,index) in param" :key="index" :border="false" :column-num="1" >
       <van-grid-item v-if="childItem.withTab === false">
         <van-cell center v-for="(grandchilditem,grandchildindex) in childItem.list" :key="grandchildindex" @click="listClik(grandchilditem)">
           <template #icon>
@@ -132,10 +132,6 @@ export default {
   margin-top: 16px;
 }
 
-
-
-
-
 .block {
   margin-left:16px;
   margin-right:16px;
@@ -150,9 +146,34 @@ export default {
   font-size: 14px;
 }
 .imgsty{
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   border-radius: 0.5rem;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+.van-cell{
+  // line-height: 20px !important;
+  padding: 10px 10px !important;
+}
+/deep/ .van-grid-item__content{
+  padding: 10px 2px !important;
+}
+.van-cell__title, .van-cell__value{
+  align-self: flex-start;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between; 
+  align-items:space-between;
+  height: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  // height: 3.6rem;
+}
+.van-cell__label{
+  font-size: 14px;
+  color: #969799;
+}
+/deep/ .van-tab{
+  font-size: 16px !important;
 }
 </style>

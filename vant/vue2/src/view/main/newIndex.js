@@ -1,6 +1,7 @@
 const blockC = {
   type: 'banner',
-  bgImg: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-6-13/banner.jpg?version=CAEQMRiBgICC5c70ihgiIGE3MjQyMzAxZTlhZjRlZWY5MDU2NGE2MWVjZWFmNTM5'
+  bgImg: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-27/bannerbg.jpg?versionId=CAEQNhiBgMCMzen0kRgiIGI0YTE0MDFkMGU5NDQ5ODFhNTdkMDIzMDBlYjQ1ZGM3'
+  // bgImg: 'https://ewa-media.oss-cn-shanghai.aliyuncs.com/media/innernew/2022-7-26/%E8%83%8C%E6%99%AF.png?versionId=CAEQNhiBgMDCucfmkRgiIGEwNTFjODU0MGUwYzQyNmY4NWY5MTQzNmNiNzIwNjM4'
 }
 const blockA = {
   type: 'tab',
